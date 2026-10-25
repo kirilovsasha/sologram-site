@@ -5,7 +5,7 @@
 - `index.html` — главная (оффер, возможности, цена, вопросы, кнопка «Открыть бота»).
 - `guide.html` — руководство пользователя. Собирается из `docs/user-guide.html` репозитория CRM, руками не править:
   `python tools/build_guide.py ../telegram-crm/docs/user-guide.html`, затем коммит.
-- `og.png` — картинка для превью ссылки (1200×630), `favicon.svg`, `apple-touch-icon.png`.
+- `og.png` — картинка для превью ссылки (1200×630); логотип — `img/`, `favicon.ico`, `favicon-48.png`, `apple-touch-icon.png`.
 - `CNAME` — домен `sologram.pro`; `robots.txt`, `sitemap.xml`, `404.html`.
 
 Кнопки ведут на `https://t.me/sologram_crm_bot?start=site`: бот принимает неизвестный параметр как обычный старт.

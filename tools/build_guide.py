@@ -20,19 +20,21 @@ HEAD = """<title>Руководство пользователя Sologram — CR
 <meta property="og:title" content="Руководство пользователя Sologram">
 <meta property="og:description" content="Записи, чаты с клиентами, заказы, оплаты и чеки НПД — как всё устроено.">
 <meta property="og:image" content="https://sologram.pro/og.png">
-<link rel="icon" href="/favicon.svg" type="image/svg+xml">"""
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">"""
 
-STYLE = """  .site-bar { position: sticky; top: 0; z-index: 5; background: #fff; border-bottom: 1px solid var(--line);
-    display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 10px 0; margin: 0 0 4pt; }
-  .site-bar a.home { color: var(--text); text-decoration: none; font-weight: 700; font-size: 13pt; }
-  .site-btn { display: inline-block; background: var(--accent); color: #fff; text-decoration: none; font-weight: 600;
-    border-radius: 10px; padding: 9px 14px; font-size: 11pt; }
+STYLE = """  .site-bar { position: sticky; top: 0; z-index: 5; display: flex; justify-content: space-between; align-items: center;
+    gap: 12px; margin: 0 -16px 4pt; padding: 10px 16px; background: #030d33; color: #e9f4ff; }
+  .site-bar a.home { display: flex; align-items: center; gap: 10px; color: inherit; text-decoration: none; font-weight: 700; font-size: 13pt; }
+  .site-bar img { width: 32px; height: 32px; border-radius: 9px; }
+  .site-btn { display: inline-block; color: #02123d; text-decoration: none; font-weight: 600; border-radius: 10px;
+    padding: 9px 14px; font-size: 11pt; background: linear-gradient(100deg, #46e3ff, #2f9bff 45%, #2a5bff); }
   .site-end { text-align: center; margin: 28pt 0 36pt; }
   @media print { .site-bar, .site-end { display: none; } }
 </style>"""
 
 BAR = f"""<body>
-<div class="site-bar"><a class="home" href="/">← Sologram</a><a class="site-btn" href="{BOT}" data-goal="open_bot" rel="noopener">Открыть бота</a></div>"""
+<div class="site-bar"><a class="home" href="/"><img src="/img/logo-128.webp" width="32" height="32" alt="">Sologram</a><a class="site-btn" href="{BOT}" data-goal="open_bot" rel="noopener">Открыть бота</a></div>"""
 
 END = f"""<div class="site-end"><a class="site-btn" href="{BOT}" data-goal="open_bot" rel="noopener">Открыть бота — 7 дней бесплатно</a></div>
 </body>"""
