@@ -8,6 +8,8 @@ The guide itself stays the single source; this adds the site's head tags and the
 import sys
 from pathlib import Path
 
+TOOLS = Path(__file__).resolve().parent
+
 BOT = "https://t.me/sologram_crm_bot?start=site"
 
 HEAD = """<title>Руководство пользователя Sologram — CRM в Telegram</title>
@@ -34,9 +36,16 @@ STYLE = """  .site-bar { position: sticky; top: 0; z-index: 5; display: flex; ju
 </style>"""
 
 BAR = f"""<body>
+<noscript><div><img src="https://mc.yandex.ru/watch/113790224" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <div class="site-bar"><a class="home" href="/"><img src="/img/logo-128.webp" width="32" height="32" alt="">Sologram</a><a class="site-btn" href="{BOT}" data-goal="open_bot" rel="noopener">Открыть бота</a></div>"""
 
-END = f"""<div class="site-end"><a class="site-btn" href="{BOT}" data-goal="open_bot" rel="noopener">Открыть бота — 7 дней бесплатно</a></div>
+END = f"""<script>
+  document.addEventListener("click", function (e) {{
+    var a = e.target.closest && e.target.closest("[data-goal]");
+    if (a && typeof window.ym === "function") window.ym(113790224, "reachGoal", a.getAttribute("data-goal"));
+  }});
+</script>
+<div class="site-end"><a class="site-btn" href="{BOT}" data-goal="open_bot" rel="noopener">Открыть бота — 7 дней бесплатно</a></div>
 </body>"""
 
 
@@ -49,7 +58,8 @@ def replace_once(text: str, old: str, new: str) -> str:
 def main() -> None:
     src = Path(sys.argv[1]).read_text(encoding="utf-8")
     start, end = src.index("<title>"), src.index("</title>") + len("</title>")
-    out = src[:start] + HEAD + src[end:]
+    metrika = (TOOLS / "metrika.html").read_text(encoding="utf-8").rstrip()
+    out = src[:start] + HEAD + "\n" + metrika + src[end:]
     out = replace_once(out, "</style>", STYLE)
     out = replace_once(out, "<body>", BAR)
     out = replace_once(out, "</body>", END)

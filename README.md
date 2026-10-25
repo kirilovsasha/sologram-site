@@ -27,5 +27,5 @@ DNS у регистратора `sologram.pro` (запись `crm` для Mini A
 
 ## Аналитика
 
-Код счётчика (например, Яндекс Метрики) вставляется в `<head>` в `index.html` и `guide.html`; в скрипте внизу
-`index.html` указать `YM_ID` — клики по кнопкам с `data-goal="open_bot"` уйдут целью `open_bot`.
+Яндекс Метрика 113790224: код в `<head>` `index.html` и в `tools/metrika.html` (его подставляет сборка руководства). В скрипте внизу
+`index.html` (`YM_ID`) и руководства клики по кнопкам с `data-goal="open_bot"` уходят целью `open_bot`.
