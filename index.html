@@ -136,7 +136,7 @@
     background: rgba(11, 34, 99, .92); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
     box-shadow: 0 20px 40px -16px rgba(0, 0, 0, .7), inset 0 0 0 1px rgba(140, 200, 255, .25); font-size: 13px; animation: bob 6s ease-in-out infinite; }
   .float .k { font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: var(--mist); }
-  .float .v { font: 600 22px/1.2 var(--display); margin: 4px 0 8px; font-variant-numeric: tabular-nums; }
+  .float .v { font: 600 22px/1.2 var(--display); margin: 4px 0 8px; font-variant-numeric: tabular-nums; color: var(--ok); transition: opacity .3s; }
   .float .row { display: flex; justify-content: space-between; gap: 8px; color: var(--mist); padding-top: 6px; border-top: 1px solid var(--panel-line); }
   .float .row + .row { margin-top: 6px; }
   .dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--ok); margin-right: 6px; vertical-align: 1px; }
@@ -274,6 +274,7 @@
         <li><b>7 дней</b> бесплатно</li>
         <li>Без карты</li>
         <li>Настройка за пару минут</li>
+        <li>₽ и BYN</li>
       </ul>
     </div>
 
@@ -291,9 +292,9 @@
         </div>
       </div>
       <div class="float">
-        <div class="k">Сегодня</div>
-        <div class="v">1 840 BYN</div>
-        <div class="row"><span><i class="dot"></i>Визитов</span><span>5 из 6</span></div>
+        <div class="k">Заработано сегодня</div>
+        <div class="v" id="earned" data-alt="+ 240 BYN">+ 7 500 ₽</div>
+        <div class="row"><span><i class="dot"></i>Оплачено визитов</span><span>5 из 6</span></div>
         <div class="row"><span><i class="dot w"></i>Чеки к выставлению</span><span>1</span></div>
       </div>
     </div>
@@ -373,7 +374,7 @@
       </article>
       <article>
         <h3>Заказы и оплаты</h3>
-        <p>Наличные, карта или перевод: вы отмечаете оплату, CRM считает остаток и долги. Возвраты, счёт и акт в PDF.</p>
+        <p>Наличные, карта или перевод: вы отмечаете оплату, CRM считает остаток и долги. Суммы в российских или белорусских рублях. Возвраты, счёт и акт в PDF.</p>
       </article>
       <article>
         <h3>Чеки и налог НПД</h3>
@@ -481,6 +482,19 @@
       var a = e.target.closest && e.target.closest("[data-goal]");
       if (a && YM_ID && typeof window.ym === "function") window.ym(YM_ID, "reachGoal", a.getAttribute("data-goal"));
     });
+    // The phone's earnings card shows both currencies in turn: RUB at rest, BYN next.
+    var earned = document.getElementById("earned");
+    if (earned && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      setInterval(function () {
+        earned.style.opacity = 0;
+        setTimeout(function () {
+          var next = earned.getAttribute("data-alt");
+          earned.setAttribute("data-alt", earned.textContent);
+          earned.textContent = next;
+          earned.style.opacity = 1;
+        }, 300);
+      }, 3500);
+    }
     var hero = document.getElementById("hero-cta"), bar = document.getElementById("sticky-cta");
     if (hero && bar && "IntersectionObserver" in window) {
       new IntersectionObserver(function (entries) {
