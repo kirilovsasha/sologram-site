@@ -4,10 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Sologram — CRM для самозанятых и малого бизнеса в Telegram</title>
-<meta name="description" content="Записи клиентов, переписка, заказы, оплаты и напоминания о чеках НПД в одном Telegram-боте. Для самозанятых и небольшого бизнеса в Беларуси и России. 7 дней бесплатно.">
+<meta name="description" content="CRM для самозанятых и малого бизнеса в Telegram: клиенты, переписка, записи, заказы, оплаты и напоминания о чеках НПД в одном боте. Беларусь и Россия. 7 дней бесплатно.">
 <link rel="canonical" href="https://sologram.pro/">
+<link rel="alternate" hreflang="ru" href="https://sologram.pro/">
+<link rel="alternate" hreflang="x-default" href="https://sologram.pro/">
 <meta name="theme-color" content="#030d33">
-<meta name="robots" content="index, follow">
+<meta name="robots" content="index, follow, max-image-preview:large">
 <meta name="yandex-verification" content="82297cd3b47ca3a7">
 <meta name="google-site-verification" content="RaHnj23lEdHDtpNkvFUtHIz4xRdSlJQHg9eQ0iQVXgs">
 <meta property="og:type" content="website">
@@ -19,7 +21,12 @@
 <meta property="og:image" content="https://sologram.pro/og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:alt" content="Sologram: ваш бизнес прямо в Telegram">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Sologram — CRM для самозанятых и малого бизнеса в Telegram">
+<meta name="twitter:description" content="Клиенты, переписка, заказы и оплаты в одном боте. 7 дней бесплатно, без оплаты и подписки.">
+<meta name="twitter:image" content="https://sologram.pro/og.png">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" href="/favicon-48.png" type="image/png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -28,15 +35,123 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700&family=Unbounded:wght@500;600;700&display=swap">
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  "name": "Sologram",
-  "applicationCategory": "BusinessApplication",
-  "operatingSystem": "Telegram",
-  "url": "https://sologram.pro/",
-  "image": "https://sologram.pro/img/logo-512.png",
-  "description": "CRM для самозанятых и небольшого бизнеса внутри Telegram: записи, переписка с клиентами, заказы, оплаты, напоминания о чеках НПД.",
-  "offers": {"@type": "Offer", "price": "0", "priceCurrency": "XTR", "description": "7 дней бесплатно, затем 400 Telegram Stars в месяц"}
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Organization",
+   "@id": "https://sologram.pro/#org",
+   "name": "Sologram",
+   "url": "https://sologram.pro/",
+   "logo": "https://sologram.pro/img/logo-512.png",
+   "sameAs": [
+    "https://t.me/sologram_crm_bot"
+   ]
+  },
+  {
+   "@type": "WebSite",
+   "@id": "https://sologram.pro/#site",
+   "url": "https://sologram.pro/",
+   "name": "Sologram",
+   "inLanguage": "ru",
+   "publisher": {
+    "@id": "https://sologram.pro/#org"
+   }
+  },
+  {
+   "@type": "SoftwareApplication",
+   "name": "Sologram",
+   "applicationCategory": "BusinessApplication",
+   "operatingSystem": "Telegram, iOS, Android, Windows, macOS, Web",
+   "url": "https://sologram.pro/",
+   "image": "https://sologram.pro/img/logo-512.png",
+   "inLanguage": "ru",
+   "publisher": {
+    "@id": "https://sologram.pro/#org"
+   },
+   "description": "CRM для самозанятых и малого бизнеса в Telegram: клиенты, переписка, записи, заказы, оплаты и напоминания о чеках НПД. Беларусь и Россия.",
+   "offers": [
+    {
+     "@type": "Offer",
+     "name": "Пробный период 7 дней",
+     "price": "0",
+     "priceCurrency": "XTR"
+    },
+    {
+     "@type": "Offer",
+     "name": "Подписка на 30 дней",
+     "price": "400",
+     "priceCurrency": "XTR"
+    },
+    {
+     "@type": "Offer",
+     "name": "Подписка на год",
+     "price": "4000",
+     "priceCurrency": "XTR"
+    }
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "Клиенту нужно что-то устанавливать?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Нет. Клиент пишет в Telegram: боту по вашей ссылке или вам в личку, если подключён Telegram Business."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Можно работать с компьютера?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Да, в Telegram Desktop или веб-версии Telegram: откройте бота и нажмите «Открыть CRM»."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Что будет после 7 бесплатных дней?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Ничего не спишется: подписки нет, пока вы сами её не оформите. Понравилось — оформите в боте. Нет — CRM перейдёт в режим просмотра, данные сохранятся."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Нужна касса или эквайринг?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Нет. Деньги вы принимаете как обычно и отмечаете оплату в CRM."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "CRM выставляет чеки в налоговую?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Нет. Она напоминает выставить чек и хранит отметки. Сам чек вы выставляете в «Мой налог» (Россия) или в сервисе МНС (Беларусь)."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Кто видит мои данные?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Только вы. Вход через ваш аккаунт Telegram, общего доступа нет. Данные банковских карт и пароли от государственных сервисов не хранятся."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Клиенты увидят рекламу?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Нет. В боте клиент видит только чат с вашим бизнесом, свои записи и заказы."
+     }
+    }
+   ]
+  }
+ ]
 }
 </script>
 <style>
@@ -108,6 +223,7 @@
   .hero .wrap { display: grid; gap: 48px; align-items: center; }
   @media (min-width: 960px) { .hero { padding-block: 88px 104px; } .hero .wrap { grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); } }
   .hero-copy { display: grid; gap: 22px; min-width: 0; }
+  h1 .kicker { display: block; margin-bottom: 22px; font-family: var(--body); line-height: 1.4; }
   h1 { font-size: clamp(30px, 4.6vw, 52px); line-height: 1.06; letter-spacing: -.02em; }
   .cta-row { display: flex; flex-wrap: wrap; gap: 12px; }
   .facts { display: flex; flex-wrap: wrap; gap: 10px; margin: 4px 0 0; padding: 0; list-style: none; }
@@ -270,8 +386,7 @@
   </svg>
   <div class="wrap">
     <div class="hero-copy">
-      <span class="eyebrow">CRM для самозанятых и малого бизнеса · Беларусь и Россия</span>
-      <h1>Ваш бизнес <span class="grad">прямо в&nbsp;Telegram</span></h1>
+      <h1><span class="eyebrow kicker">CRM для самозанятых и малого бизнеса · Беларусь и Россия</span> Ваш бизнес <span class="grad">прямо в&nbsp;Telegram</span></h1>
       <p class="lead">Клиенты, переписка, заказы и оплаты в одном боте. Записи и календарь, сделки, аренда и напоминания о чеках подключаются под ваш вид деятельности. Ничего не нужно устанавливать.</p>
       <div class="cta-row">
         <a class="btn" id="hero-cta" href="https://t.me/sologram_crm_bot?start=site" data-goal="open_bot" rel="noopener">

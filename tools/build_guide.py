@@ -22,6 +22,13 @@ HEAD = """<title>Руководство пользователя Sologram — CR
 <meta property="og:title" content="Руководство пользователя Sologram">
 <meta property="og:description" content="Записи, чаты с клиентами, заказы, оплаты и чеки НПД — как всё устроено.">
 <meta property="og:image" content="https://sologram.pro/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
+ {"@type": "ListItem", "position": 1, "name": "Sologram", "item": "https://sologram.pro/"},
+ {"@type": "ListItem", "position": 2, "name": "Руководство пользователя", "item": "https://sologram.pro/guide.html"}]}
+</script>
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">"""
 
