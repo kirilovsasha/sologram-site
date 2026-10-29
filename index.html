@@ -177,6 +177,7 @@
     --cyan: #39d7ff;       /* the plane's bright edge */
     --blue: #2f7bff;       /* the ribbon's deep end */
     --glow: linear-gradient(100deg, #46e3ff 0%, #2f9bff 45%, #2a5bff 100%);
+    --glow-btn: linear-gradient(100deg, #46e3ff 0%, #5aa8ff 100%);  /* light enough for dark text everywhere */
     --ok: #4fe0a4;
     --warn: #ffc066;
     --display: "Unbounded", "Segoe UI", system-ui, sans-serif;
@@ -202,7 +203,7 @@
 
   /* Buttons */
   .btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 52px; padding: 0 26px;
-    border-radius: 16px; font: 600 17px/1 var(--body); text-decoration: none; color: #02123d; background: var(--glow);
+    border-radius: 16px; font: 600 17px/1 var(--body); text-decoration: none; color: #02123d; background: var(--glow-btn);
     box-shadow: 0 10px 30px -10px rgba(57, 160, 255, .8), inset 0 1px 0 rgba(255, 255, 255, .5); transition: transform .15s, box-shadow .15s; }
   .btn:hover { transform: translateY(-1px); box-shadow: 0 16px 36px -10px rgba(57, 190, 255, .9), inset 0 1px 0 rgba(255, 255, 255, .5); }
   .btn svg { width: 22px; height: 22px; flex: none; }
@@ -361,7 +362,7 @@
 
   footer { border-top: 1px solid var(--panel-line); padding-block: 30px calc(30px + env(safe-area-inset-bottom, 0px)); font-size: 14px; color: var(--mist); }
   footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px 24px; }
-  footer a { color: var(--mist); }
+  footer a { color: var(--mist); display: inline-block; padding-block: 10px; }
 
   /* Mobile: the bot button stays at hand once the hero scrolls away. */
   .sticky-cta { position: fixed; left: 0; right: 0; bottom: 0; z-index: 25; display: none;
@@ -415,7 +416,7 @@
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M2.5 11.3l17.7-6.9c.8-.3 1.6.2 1.3 1.5l-3 14.2c-.2 1-.8 1.3-1.7.8l-4.6-3.4-2.2 2.1c-.3.3-.5.5-1 .5l.3-4.8 8.6-7.8c.4-.3-.1-.5-.6-.2L6.6 14 2 12.6c-1-.3-1-1 .5-1.3z"/></svg>
           Открыть бота
         </a>
-        <a class="btn line" href="/guide.html">Как это работает</a>
+        <a class="btn line" href="#screens">Посмотреть экраны</a>
       </div>
       <ul class="facts">
         <li><b>7 дней</b> бесплатно</li>
@@ -636,7 +637,7 @@
 
 <section class="final">
   <div class="wrap">
-    <img src="/img/logo-256.webp" width="120" height="120" alt="Логотип SoloGram" loading="lazy">
+    <img src="/img/logo-256.webp" width="120" height="120" alt="Логотип SoloGram">
     <h2>Попробуйте 7 дней бесплатно</h2>
     <p class="lead">Откройте бота и ответьте на пару вопросов. Платить сейчас ничего не нужно: подписку оформите потом, если понравится.</p>
     <a class="btn" href="https://t.me/sologram_crm_bot?start=site" data-goal="open_bot" rel="noopener">Открыть бота</a>
