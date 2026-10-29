@@ -22,18 +22,6 @@
 </script>
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<!-- Yandex.Metrika counter -->
-<script type="text/javascript">
-    (function(m,e,t,r,i,k,a){
-        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-        m[i].l=1*new Date();
-        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
-    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=113790224', 'ym');
-
-    ym(113790224, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
-</script>
-<!-- /Yandex.Metrika counter -->
 <style>
   @page { size: A4; margin: 18mm 17mm 18mm 17mm; }
   :root { --accent: #2481cc; --soft: #eaf3fb; --warn: #fff4e0; --warn-b: #f0a73a; --text: #1d2733; --muted: #5d6b7a; --line: #d9e2ec; }
@@ -75,11 +63,12 @@
   .site-btn { display: inline-block; color: #02123d; text-decoration: none; font-weight: 600; border-radius: 10px;
     padding: 9px 14px; font-size: 11pt; background: linear-gradient(100deg, #46e3ff, #2f9bff 45%, #2a5bff); }
   .site-end { text-align: center; margin: 28pt 0 36pt; }
-  @media print { .site-bar, .site-end { display: none; } }
+  .site-links { text-align: center; font-size: 10pt; color: var(--muted); margin: 0 0 24pt; }
+  .site-links a { color: inherit; display: inline-block; padding: 8px 0; }
+  @media print { .site-bar, .site-end, .site-links { display: none; } }
 </style>
 </head>
 <body>
-<noscript><div><img src="https://mc.yandex.ru/watch/113790224" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <div class="site-bar"><a class="home" href="/"><img src="/img/logo-128.webp" width="32" height="32" alt="">SoloGram</a><a class="site-btn" href="https://t.me/sologram_crm_bot?start=site" data-goal="open_bot" rel="noopener">Открыть бота</a></div>
 
 <h1>SoloGram — руководство пользователя</h1>
@@ -393,5 +382,7 @@
   });
 </script>
 <div class="site-end"><a class="site-btn" href="https://t.me/sologram_crm_bot?start=site" data-goal="open_bot" rel="noopener">Открыть бота — 7 дней бесплатно</a></div>
+<p class="site-links"><a href="/contacts.html">Контакты</a> · <a href="/privacy.html">Политика конфиденциальности</a> · <a href="#" onclick="return window.sgCookieSettings && window.sgCookieSettings()">Настройки cookies</a></p>
+<script src="/consent.js"></script>
 </body>
 </html>

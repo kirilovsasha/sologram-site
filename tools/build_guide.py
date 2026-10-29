@@ -8,7 +8,6 @@ The guide itself stays the single source; this adds the site's head tags and the
 import sys
 from pathlib import Path
 
-TOOLS = Path(__file__).resolve().parent
 
 BOT = "https://t.me/sologram_crm_bot?start=site"
 
@@ -39,11 +38,12 @@ STYLE = """  .site-bar { position: sticky; top: 0; z-index: 5; display: flex; ju
   .site-btn { display: inline-block; color: #02123d; text-decoration: none; font-weight: 600; border-radius: 10px;
     padding: 9px 14px; font-size: 11pt; background: linear-gradient(100deg, #46e3ff, #2f9bff 45%, #2a5bff); }
   .site-end { text-align: center; margin: 28pt 0 36pt; }
-  @media print { .site-bar, .site-end { display: none; } }
+  .site-links { text-align: center; font-size: 10pt; color: var(--muted); margin: 0 0 24pt; }
+  .site-links a { color: inherit; display: inline-block; padding: 8px 0; }
+  @media print { .site-bar, .site-end, .site-links { display: none; } }
 </style>"""
 
 BAR = f"""<body>
-<noscript><div><img src="https://mc.yandex.ru/watch/113790224" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <div class="site-bar"><a class="home" href="/"><img src="/img/logo-128.webp" width="32" height="32" alt="">SoloGram</a><a class="site-btn" href="{BOT}" data-goal="open_bot" rel="noopener">Открыть бота</a></div>"""
 
 END = f"""<script>
@@ -53,6 +53,8 @@ END = f"""<script>
   }});
 </script>
 <div class="site-end"><a class="site-btn" href="{BOT}" data-goal="open_bot" rel="noopener">Открыть бота — 7 дней бесплатно</a></div>
+<p class="site-links"><a href="/contacts.html">Контакты</a> · <a href="/privacy.html">Политика конфиденциальности</a> · <a href="#" onclick="return window.sgCookieSettings && window.sgCookieSettings()">Настройки cookies</a></p>
+<script src="/consent.js"></script>
 </body>"""
 
 
@@ -65,8 +67,7 @@ def replace_once(text: str, old: str, new: str) -> str:
 def main() -> None:
     src = Path(sys.argv[1]).read_text(encoding="utf-8")
     start, end = src.index("<title>"), src.index("</title>") + len("</title>")
-    metrika = (TOOLS / "metrika.html").read_text(encoding="utf-8").rstrip()
-    out = src[:start] + HEAD + "\n" + metrika + src[end:]
+    out = src[:start] + HEAD + src[end:]
     out = replace_once(out, "</style>", STYLE)
     out = replace_once(out, "<body>", BAR)
     out = replace_once(out, "</body>", END)

@@ -371,21 +371,8 @@
   .sticky-cta .btn { width: 100%; }
   @media (max-width: 899px) { .sticky-cta.show { display: block; } footer { padding-bottom: calc(96px + env(safe-area-inset-bottom, 0px)); } }
 </style>
-<!-- Yandex.Metrika counter -->
-<script type="text/javascript">
-    (function(m,e,t,r,i,k,a){
-        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-        m[i].l=1*new Date();
-        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
-    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=113790224', 'ym');
-
-    ym(113790224, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
-</script>
-<!-- /Yandex.Metrika counter -->
 </head>
 <body>
-<noscript><div><img src="https://mc.yandex.ru/watch/113790224" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 
 <header class="top">
   <div class="wrap">
@@ -648,7 +635,7 @@
 <footer>
   <div class="wrap">
     <span>© 2026 SoloGram</span>
-    <span><a href="/guide.html">Руководство</a> · <a href="https://t.me/sologram_crm_bot?start=site" data-goal="open_bot" rel="noopener">@sologram_crm_bot</a> · условия: команда /terms в боте</span>
+    <span><a href="/guide.html">Руководство</a> · <a href="/contacts.html">Контакты</a> · <a href="/privacy.html">Политика конфиденциальности</a> · <a href="#" onclick="return window.sgCookieSettings && window.sgCookieSettings()">Настройки cookies</a> · <a href="https://t.me/sologram_crm_bot?start=site" data-goal="open_bot" rel="noopener">@sologram_crm_bot</a></span>
   </div>
 </footer>
 
@@ -656,7 +643,7 @@
 
 <script>
   (function () {
-    // Yandex Metrica counter (snippet in <head>).
+    // Yandex Metrica counter: loaded by consent.js once the visitor accepts cookies.
     var YM_ID = 113790224;
     document.addEventListener("click", function (e) {
       var a = e.target.closest && e.target.closest("[data-goal]");
@@ -683,5 +670,6 @@
     }
   })();
 </script>
+<script src="/consent.js"></script>
 </body>
 </html>
