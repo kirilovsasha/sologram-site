@@ -12,21 +12,21 @@ TOOLS = Path(__file__).resolve().parent
 
 BOT = "https://t.me/sologram_crm_bot?start=site"
 
-HEAD = """<title>Руководство пользователя Sologram — CRM в Telegram</title>
-<meta name="description" content="Как работать в Sologram: записи, онлайн-запись в боте, чаты с клиентами, заказы и оплаты, чеки НПД, подписка и настройки.">
+HEAD = """<title>Руководство пользователя SoloGram — CRM в Telegram</title>
+<meta name="description" content="Как работать в SoloGram: записи, онлайн-запись в боте, чаты с клиентами, заказы и оплаты, чеки НПД, подписка и настройки.">
 <link rel="canonical" href="https://sologram.pro/guide.html">
 <meta property="og:type" content="article">
 <meta property="og:locale" content="ru_RU">
-<meta property="og:site_name" content="Sologram">
+<meta property="og:site_name" content="SoloGram">
 <meta property="og:url" content="https://sologram.pro/guide.html">
-<meta property="og:title" content="Руководство пользователя Sologram">
+<meta property="og:title" content="Руководство пользователя SoloGram">
 <meta property="og:description" content="Записи, чаты с клиентами, заказы, оплаты и чеки НПД — как всё устроено.">
 <meta property="og:image" content="https://sologram.pro/og.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <script type="application/ld+json">
 {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
- {"@type": "ListItem", "position": 1, "name": "Sologram", "item": "https://sologram.pro/"},
+ {"@type": "ListItem", "position": 1, "name": "SoloGram", "item": "https://sologram.pro/"},
  {"@type": "ListItem", "position": 2, "name": "Руководство пользователя", "item": "https://sologram.pro/guide.html"}]}
 </script>
 <link rel="icon" href="/favicon.ico" sizes="any">
@@ -44,7 +44,7 @@ STYLE = """  .site-bar { position: sticky; top: 0; z-index: 5; display: flex; ju
 
 BAR = f"""<body>
 <noscript><div><img src="https://mc.yandex.ru/watch/113790224" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-<div class="site-bar"><a class="home" href="/"><img src="/img/logo-128.webp" width="32" height="32" alt="">Sologram</a><a class="site-btn" href="{BOT}" data-goal="open_bot" rel="noopener">Открыть бота</a></div>"""
+<div class="site-bar"><a class="home" href="/"><img src="/img/logo-128.webp" width="32" height="32" alt="">SoloGram</a><a class="site-btn" href="{BOT}" data-goal="open_bot" rel="noopener">Открыть бота</a></div>"""
 
 END = f"""<script>
   document.addEventListener("click", function (e) {{
@@ -70,7 +70,7 @@ def main() -> None:
     out = replace_once(out, "</style>", STYLE)
     out = replace_once(out, "<body>", BAR)
     out = replace_once(out, "</body>", END)
-    out = replace_once(out, "<h1>Telegram CRM</h1>", "<h1>Sologram — руководство пользователя</h1>")
+    out = replace_once(out, "<h1>Telegram CRM</h1>", "<h1>SoloGram — руководство пользователя</h1>")
     Path(__file__).resolve().parent.parent.joinpath("guide.html").write_text(out, encoding="utf-8")
 
 
