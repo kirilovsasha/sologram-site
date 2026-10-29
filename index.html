@@ -22,7 +22,7 @@
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:type" content="image/png">
-<meta property="og:image:alt" content="Sologram: ваш бизнес прямо в Telegram">
+<meta property="og:image:alt" content="Sologram: клиенты, заказы и оплаты под контролем в Telegram">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Sologram — CRM для самозанятых и малого бизнеса в Telegram">
 <meta name="twitter:description" content="Клиенты, переписка, заказы и оплаты в одном боте. 7 дней бесплатно, без оплаты и подписки.">
@@ -111,10 +111,18 @@
     },
     {
      "@type": "Question",
+     "name": "Подойдёт ли для моей деятельности?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "При настройке вы выбираете вид деятельности, и CRM включает нужные разделы. Например: • Мастера (маникюр, парикмахер, массаж, косметолог): календарь, онлайн-запись в боте, напоминания клиентам о визите, абонементы. • Консультанты, репетиторы, психологи, тренеры : серии занятий раз в неделю, групповые занятия, предоплата, переписка с клиентами в одном месте. • ИП и небольшие компании (ремонт, IT, проекты): заявки, сделки по этапам, заказы со сроками, счёт и акт в PDF для организаций. • Торговля на заказ (изделия, выпечка, одежда): заказы с позициями, предоплата и остаток, доставка и трек-номер, долги. • Аренда (квартиры, техника, вещи): календарь каждого объекта, цена за сутки, неделю или месяц, залог. Если ничего не подошло, выберите «Другое» и включите нужные разделы сами."
+     }
+    },
+    {
+     "@type": "Question",
      "name": "Что будет после 7 бесплатных дней?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Ничего не спишется: подписки нет, пока вы сами её не оформите. Понравилось — оформите в боте. Нет — CRM перейдёт в режим просмотра, данные сохранятся."
+      "text": "Ничего не спишется: подписки нет, пока вы сами её не оформите. После пробного периода есть ещё 2 дня, когда всё работает как прежде. Если подписку не оформить, CRM переходит в режим просмотра. Сохраняется и работает: все данные (клиенты, история, записи, заказы, оплаты), чтение чатов, «Сводка», отметка чеков, счета и акты PDF, поддержка. Новые сообщения клиентов продолжают приходить в CRM, ни одно не потеряется. Становится недоступно: ответы клиентам, новые записи, заказы и заявки, отметка оплат, изменение данных и настроек. Онлайн-запись в боте закрывается, напоминания клиентам и автоответ не отправляются. Оформили подписку — всё снова работает сразу, с теми же данными."
      }
     },
     {
@@ -224,7 +232,7 @@
   @media (min-width: 960px) { .hero { padding-block: 88px 104px; } .hero .wrap { grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); } }
   .hero-copy { display: grid; gap: 22px; min-width: 0; }
   h1 .kicker { display: block; margin-bottom: 22px; font-family: var(--body); line-height: 1.4; }
-  h1 { font-size: clamp(30px, 4.6vw, 52px); line-height: 1.06; letter-spacing: -.02em; }
+  h1 { font-size: clamp(28px, 4vw, 46px); line-height: 1.06; letter-spacing: -.02em; }
   .cta-row { display: flex; flex-wrap: wrap; gap: 12px; }
   .facts { display: flex; flex-wrap: wrap; gap: 10px; margin: 4px 0 0; padding: 0; list-style: none; }
   .facts li { font-size: 14px; color: var(--mist); padding: 7px 13px; border-radius: 999px; background: rgba(140, 200, 255, .07); box-shadow: inset 0 0 0 1px var(--panel-line); }
@@ -331,6 +339,20 @@
   .faq-more { margin-top: 22px; color: var(--mist); }
 
   /* Final call */
+  /* Real app screens: a row of phones, swiped on narrow screens. */
+  .shots { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(220px, 1fr); gap: 20px; overflow-x: auto;
+    scroll-snap-type: x mandatory; padding-bottom: 12px; margin: 0; }
+  .shots figure { margin: 0; scroll-snap-align: start; display: grid; gap: 14px; align-content: start; }
+  .shot { border-radius: 30px; padding: 8px; background: linear-gradient(160deg, #1c3a8a, #0a1847);
+    box-shadow: 0 30px 60px -30px rgba(0, 0, 0, .8), 0 0 0 1px rgba(140, 200, 255, .25); }
+  .shot img { width: 100%; height: auto; border-radius: 23px; }
+  .shots figcaption { color: var(--mist); font-size: 15px; }
+  .shots figcaption b { display: block; color: var(--sky); font-weight: 600; }
+  @media (max-width: 700px) { .shots { grid-auto-columns: 72%; } }
+  .ans { padding-bottom: 6px; }
+  .ans p, .ans ul { margin: 0 0 12px; color: var(--mist); }
+  .ans ul { padding-left: 20px; display: grid; gap: 6px; }
+  .ans b { color: var(--sky); font-weight: 600; }
   .final { text-align: center; position: relative; isolation: isolate; overflow: hidden; }
   .final::before { content: ""; position: absolute; inset: 0; z-index: -1; background: radial-gradient(50% 60% at 50% 40%, rgba(47, 123, 255, .35), transparent 70%); }
   .final .wrap { display: grid; justify-items: center; gap: 22px; }
@@ -386,8 +408,8 @@
   </svg>
   <div class="wrap">
     <div class="hero-copy">
-      <h1><span class="eyebrow kicker">CRM для самозанятых и малого бизнеса · Беларусь и Россия</span> Ваш бизнес <span class="grad">прямо в&nbsp;Telegram</span></h1>
-      <p class="lead">Клиенты, переписка, заказы и оплаты в одном боте. Записи и календарь, сделки, аренда и напоминания о чеках подключаются под ваш вид деятельности. Ничего не нужно устанавливать.</p>
+      <h1><span class="eyebrow kicker">CRM для самозанятых и малого бизнеса · Беларусь и Россия</span> Клиенты, заказы и оплаты под контролем <span class="grad">в&nbsp;Telegram</span></h1>
+      <p class="lead">Ведите клиентскую базу, принимайте заявки, планируйте записи, контролируйте оплаты и получайте напоминания. Sologram помогает организовать работу без таблиц и отдельной CRM.</p>
       <div class="cta-row">
         <a class="btn" id="hero-cta" href="https://t.me/sologram_crm_bot?start=site" data-goal="open_bot" rel="noopener">
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M2.5 11.3l17.7-6.9c.8-.3 1.6.2 1.3 1.5l-3 14.2c-.2 1-.8 1.3-1.7.8l-4.6-3.4-2.2 2.1c-.3.3-.5.5-1 .5l.3-4.8 8.6-7.8c.4-.3-.1-.5-.6-.2L6.6 14 2 12.6c-1-.3-1-1 .5-1.3z"/></svg>
@@ -399,7 +421,6 @@
         <li><b>7 дней</b> бесплатно</li>
         <li>Ничего не платите сразу</li>
         <li>Подписка потом, по желанию</li>
-        <li>₽ и BYN</li>
       </ul>
     </div>
 
@@ -419,14 +440,30 @@
       <div class="float">
         <div class="k">Заработано сегодня</div>
         <div class="v" id="earned" data-alt="+ 240 BYN">+ 7 500 ₽</div>
-        <div class="row"><span><i class="dot"></i>Оплачено визитов</span><span>5 из 6</span></div>
+        <div class="row"><span><i class="dot"></i>Визиты оплачены</span><span>5/6</span></div>
         <div class="row"><span><i class="dot w"></i>Чеки к выставлению</span><span>1</span></div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="band" id="who">
+<section class="band" id="screens">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow">Приложение</span>
+      <h2>Так выглядит CRM в Telegram</h2>
+      <p class="lead">Настоящие экраны приложения, заполненные тестовыми данными. Открываются кнопкой «Открыть CRM» в боте на телефоне и компьютере.</p>
+    </div>
+    <div class="shots">
+      <figure><div class="shot"><img src="/img/app/home.webp" width="585" height="1200" alt="Главная: что требует внимания сегодня и список чатов" loading="lazy"></div><figcaption><b>Главная</b>Что требует внимания сегодня и все чаты с клиентами</figcaption></figure>
+      <figure><div class="shot"><img src="/img/app/calendar.webp" width="585" height="1200" alt="Календарь записей на день со свободными окнами" loading="lazy"></div><figcaption><b>Записи</b>Календарь дня, свободные окна и загрузка</figcaption></figure>
+      <figure><div class="shot"><img src="/img/app/customer.webp" width="585" height="1200" alt="Карточка клиента с визитами, заказами и оплатами" loading="lazy"></div><figcaption><b>Клиент</b>Контакты, визиты, заказы и оплаты в одной карточке</figcaption></figure>
+      <figure><div class="shot"><img src="/img/app/summary.webp" width="585" height="1200" alt="Сводка: оплаты, средний чек и доход по услугам" loading="lazy"></div><figcaption><b>Сводка</b>Оплаты, средний чек, доход по услугам и расходы</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section id="who">
   <div class="wrap">
     <div class="head">
       <span class="eyebrow">Для кого</span>
@@ -456,7 +493,7 @@
   </div>
 </section>
 
-<section id="day">
+<section class="band" id="day">
   <div class="wrap day-grid">
     <div class="head">
       <span class="eyebrow">Один день</span>
@@ -466,14 +503,14 @@
     <ol class="day">
       <li><time>09:00</time><i class="pin"></i><div><b>Клиент пишет боту по вашей ссылке</b><span>Сообщение приходит в CRM, вам — уведомление. Заявка создаётся сама.</span></div></li>
       <li><time>11:00</time><i class="pin"></i><div><b>Забыли ответить</b><span>Прочитали и не ответили — через 2 часа бот напомнит. Ночью не беспокоит.</span></div></li>
-      <li><time>12:00</time><i class="pin"></i><div><b>Чеки к выставлению</b><span>После каждой оплаты CRM создаёт напоминание о чеке НПД и присылает их одним сообщением в 12:00, 16:00 и 20:00.</span></div></li>
+      <li><time>12:00</time><i class="pin"></i><div><b>Напоминание о чеках</b><span>После каждой оплаты CRM напоминает выставить чек и присылает список одним сообщением в 12:00, 16:00 и 20:00. Чек вы выставляете сами в налоговом сервисе, затем отмечаете его в CRM.</span></div></li>
       <li><time>15:00</time><i class="pin"></i><div><b>Визит</b><span>Клиент получил «Вы записаны» и напоминание накануне. После визита вы отмечаете «Пришли» и оплату.</span></div></li>
       <li><time>20:00</time><i class="pin"></i><div><b>Итоги дня</b><span>Бот присылает визиты дня без отметки с кнопкой «Все пришли» и напоминает клиентам о завтрашних записях.</span></div></li>
     </ol>
   </div>
 </section>
 
-<section class="band" id="features">
+<section id="features">
   <div class="wrap">
     <div class="head">
       <span class="eyebrow">Возможности</span>
@@ -502,9 +539,9 @@
         <p>Наличные, карта или перевод: вы отмечаете оплату, CRM считает остаток и долги. Суммы в российских или белорусских рублях. Возвраты, счёт и акт в PDF.</p>
       </article>
       <article>
-        <h3>Чеки и налог НПД</h3>
-        <p>Напоминание выставить чек после каждой оплаты, доход за год и срок уплаты налога.</p>
-        <div class="chk"><span>Россия: до 28-го</span><span>Беларусь: до 22-го</span></div>
+        <h3>Напоминания о чеках и налоговых сроках</h3>
+        <p>Sologram помогает учитывать доходы и не забывать о необходимых действиях. Чеки вы выставляете самостоятельно в официальном налоговом сервисе своей страны.</p>
+        <div class="chk"><span>Уплата налога: Россия до 28-го</span><span>Беларусь до 22-го</span></div>
       </article>
       <article class="wide">
         <h3>«Сводка» показывает, на чём вы зарабатываете</h3>
@@ -518,7 +555,7 @@
   </div>
 </section>
 
-<section id="how">
+<section class="band" id="how">
   <div class="wrap">
     <div class="head">
       <span class="eyebrow">Как начать</span>
@@ -534,7 +571,7 @@
   </div>
 </section>
 
-<section class="band" id="price">
+<section id="price">
   <div class="wrap">
     <div class="head">
       <span class="eyebrow">Цена</span>
@@ -562,7 +599,7 @@
   </div>
 </section>
 
-<section id="faq">
+<section class="band" id="faq">
   <div class="wrap">
     <div class="head">
       <span class="eyebrow">Вопросы</span>
@@ -571,7 +608,23 @@
     <div class="faq">
       <details><summary>Клиенту нужно что-то устанавливать?</summary><p>Нет. Клиент пишет в Telegram: боту по вашей ссылке или вам в личку, если подключён Telegram Business.</p></details>
       <details><summary>Можно работать с компьютера?</summary><p>Да, в Telegram Desktop или веб-версии Telegram: откройте бота и нажмите «Открыть CRM».</p></details>
-      <details><summary>Что будет после 7 бесплатных дней?</summary><p>Ничего не спишется: подписки нет, пока вы сами её не оформите. Понравилось — оформите в боте. Нет — CRM перейдёт в режим просмотра, данные сохранятся.</p></details>
+      <details><summary>Подойдёт ли для моей деятельности?</summary><div class="ans">
+        <p>При настройке вы выбираете вид деятельности, и CRM включает нужные разделы. Например:</p>
+        <ul>
+          <li><b>Мастера</b> (маникюр, парикмахер, массаж, косметолог): календарь, онлайн-запись в боте, напоминания клиентам о визите, абонементы.</li>
+          <li><b>Консультанты, репетиторы, психологи, тренеры</b>: серии занятий раз в неделю, групповые занятия, предоплата, переписка с клиентами в одном месте.</li>
+          <li><b>ИП и небольшие компании</b> (ремонт, IT, проекты): заявки, сделки по этапам, заказы со сроками, счёт и акт в PDF для организаций.</li>
+          <li><b>Торговля на заказ</b> (изделия, выпечка, одежда): заказы с позициями, предоплата и остаток, доставка и трек-номер, долги.</li>
+          <li><b>Аренда</b> (квартиры, техника, вещи): календарь каждого объекта, цена за сутки, неделю или месяц, залог.</li>
+        </ul>
+        <p>Если ничего не подошло, выберите «Другое» и включите нужные разделы сами.</p>
+      </div></details>
+      <details><summary>Что будет после 7 бесплатных дней?</summary><div class="ans">
+        <p>Ничего не спишется: подписки нет, пока вы сами её не оформите. После пробного периода есть ещё 2 дня, когда всё работает как прежде. Если подписку не оформить, CRM переходит в режим просмотра.</p>
+        <p><b>Сохраняется и работает:</b> все данные (клиенты, история, записи, заказы, оплаты), чтение чатов, «Сводка», отметка чеков, счета и акты PDF, поддержка. Новые сообщения клиентов продолжают приходить в CRM, ни одно не потеряется.</p>
+        <p><b>Становится недоступно:</b> ответы клиентам, новые записи, заказы и заявки, отметка оплат, изменение данных и настроек. Онлайн-запись в боте закрывается, напоминания клиентам и автоответ не отправляются.</p>
+        <p>Оформили подписку — всё снова работает сразу, с теми же данными.</p>
+      </div></details>
       <details><summary>Нужна касса или эквайринг?</summary><p>Нет. Деньги вы принимаете как обычно и отмечаете оплату в CRM.</p></details>
       <details><summary>CRM выставляет чеки в налоговую?</summary><p>Нет. Она напоминает выставить чек и хранит отметки. Сам чек вы выставляете в «Мой налог» (Россия) или в сервисе МНС (Беларусь).</p></details>
       <details><summary>Кто видит мои данные?</summary><p>Только вы. Вход через ваш аккаунт Telegram, общего доступа нет. Данные банковских карт и пароли от государственных сервисов не хранятся.</p></details>
@@ -581,7 +634,7 @@
   </div>
 </section>
 
-<section class="band final">
+<section class="final">
   <div class="wrap">
     <img src="/img/logo-256.webp" width="120" height="120" alt="Логотип Sologram" loading="lazy">
     <h2>Попробуйте 7 дней бесплатно</h2>
