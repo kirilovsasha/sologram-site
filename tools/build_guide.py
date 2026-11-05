@@ -12,14 +12,14 @@ from pathlib import Path
 BOT = "https://t.me/sologram_crm_bot?start=site"
 
 HEAD = """<title>Руководство пользователя SoloGram — CRM в Telegram</title>
-<meta name="description" content="Как работать в SoloGram: записи, онлайн-запись в боте, чаты с клиентами, заказы и оплаты, чеки НПД, подписка и настройки.">
+<meta name="description" content="Как работать в SoloGram: записи, онлайн-запись в боте, чаты с клиентами, заказы и оплаты, чеки и налоги, подписка и настройки.">
 <link rel="canonical" href="https://sologram.pro/guide.html">
 <meta property="og:type" content="article">
 <meta property="og:locale" content="ru_RU">
 <meta property="og:site_name" content="SoloGram">
 <meta property="og:url" content="https://sologram.pro/guide.html">
 <meta property="og:title" content="Руководство пользователя SoloGram">
-<meta property="og:description" content="Записи, чаты с клиентами, заказы, оплаты и чеки НПД — как всё устроено.">
+<meta property="og:description" content="Записи, чаты с клиентами, заказы, оплаты, чеки и налоги — как всё устроено.">
 <meta property="og:image" content="https://sologram.pro/og.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="robots" content="index, follow, max-image-preview:large">
