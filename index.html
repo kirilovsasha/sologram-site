@@ -230,7 +230,7 @@
   .flight path { fill: none; stroke: url(#ribbon); stroke-width: 2.2; stroke-linecap: round; stroke-dasharray: 2600; stroke-dashoffset: 0; animation: fly 2.4s ease-out both; opacity: .55; }
   @keyframes fly { from { stroke-dashoffset: 2600; } to { stroke-dashoffset: 0; } }
   .hero .wrap { display: grid; gap: 48px; align-items: center; }
-  @media (min-width: 960px) { .hero { padding-block: 88px 104px; } .hero .wrap { grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); } }
+  @media (min-width: 960px) { .hero { padding-block: 52px 64px; } .hero .wrap { grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); } }
   .hero-copy { display: grid; gap: 22px; min-width: 0; }
   h1 .kicker { display: block; margin-bottom: 22px; font-family: var(--body); line-height: 1.4; }
   h1 { font-size: clamp(28px, 4vw, 46px); line-height: 1.06; letter-spacing: -.02em; }
@@ -240,12 +240,12 @@
   .facts b { color: var(--sky); font-weight: 600; }
 
   /* A real app screen makes the product visible before visitors scroll. */
-  .stage { justify-self: center; width: min(355px, 100%); margin: 0; }
+  .stage { justify-self: center; width: min(260px, 100%); margin: 0; }
   .hero-screen { padding: 9px; border-radius: 32px; background: linear-gradient(160deg, #1c3a8a, #0a1847);
     box-shadow: 0 36px 72px -28px rgba(0, 0, 0, .8), 0 0 0 1px rgba(140, 200, 255, .25), 0 0 90px -20px rgba(57, 160, 255, .4); }
   .hero-screen img { width: 100%; height: auto; border-radius: 24px; }
   .stage figcaption { margin-top: 14px; color: var(--mist); font-size: 14px; text-align: center; }
-  @media (max-width: 520px) { .flight { display: none; } .stage { width: min(300px, 100%); } }
+  @media (max-width: 520px) { .flight { display: none; } .stage { width: min(260px, 100%); } }
 
   section { padding-block: clamp(56px, 7vw, 80px); scroll-margin-top: 82px; }
   .band { background: linear-gradient(180deg, var(--ink-2), var(--ink)); border-top: 1px solid var(--panel-line); }
@@ -317,7 +317,7 @@
 
   /* Final call */
   /* Real app screens: a row of phones, swiped on narrow screens. */
-  .shots { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(220px, 1fr); gap: 20px; overflow-x: auto;
+  .shots { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(260px, 1fr); gap: 20px; overflow-x: auto;
     scroll-snap-type: x mandatory; padding-bottom: 12px; margin: 0; }
   .shots:focus-visible { outline-offset: 4px; }
   .shots figure { margin: 0; scroll-snap-align: start; display: grid; gap: 14px; align-content: start; }
@@ -401,13 +401,12 @@
     <div class="head">
       <span class="eyebrow">Приложение</span>
       <h2>Так выглядит CRM в Telegram</h2>
-      <p class="lead">Настоящие экраны приложения, заполненные тестовыми данными. Открываются кнопкой «Открыть CRM» в боте на телефоне и компьютере.</p>
+      <p class="lead">Экраны с тестовыми данными. Нажмите на изображение, чтобы открыть его целиком.</p>
     </div>
     <div class="shots" tabindex="0" role="region" aria-label="Экраны приложения; прокрутите для просмотра">
-      <figure><div class="shot"><img src="/img/app/home.webp" width="585" height="1200" alt="Главная: что требует внимания сегодня и список чатов" loading="lazy"></div><figcaption><b>Главная</b>Что требует внимания сегодня и все чаты с клиентами</figcaption></figure>
-      <figure><div class="shot"><img src="/img/app/calendar.webp" width="585" height="1200" alt="Календарь записей на день со свободными окнами" loading="lazy"></div><figcaption><b>Записи</b>Календарь дня, свободные окна и загрузка</figcaption></figure>
-      <figure><div class="shot"><img src="/img/app/customer.webp" width="585" height="1200" alt="Карточка клиента с визитами, заказами и оплатами" loading="lazy"></div><figcaption><b>Клиент</b>Контакты, визиты, заказы и оплаты в одной карточке</figcaption></figure>
-      <figure><div class="shot"><img src="/img/app/summary.webp" width="585" height="1200" alt="Сводка: оплаты, средний чек и доход по услугам" loading="lazy"></div><figcaption><b>Сводка</b>Оплаты, средний чек, доход по услугам и расходы</figcaption></figure>
+      <figure><a class="shot" href="/img/app/calendar.webp" aria-label="Открыть полный экран записей"><img src="/img/app/calendar.webp" width="585" height="1200" alt="Календарь записей на день со свободными окнами" loading="lazy"></a><figcaption><b>Записи</b>Календарь дня, свободные окна и загрузка</figcaption></figure>
+      <figure><a class="shot" href="/img/app/customer.webp" aria-label="Открыть полный экран карточки клиента"><img src="/img/app/customer.webp" width="585" height="1200" alt="Карточка клиента с визитами, заказами и оплатами" loading="lazy"></a><figcaption><b>Клиент</b>Контакты, визиты, заказы и оплаты в одной карточке</figcaption></figure>
+      <figure><a class="shot" href="/img/app/summary.webp" aria-label="Открыть полный экран сводки"><img src="/img/app/summary.webp" width="585" height="1200" alt="Сводка: оплаты, средний чек и доход по услугам" loading="lazy"></a><figcaption><b>Сводка</b>Оплаты, средний чек, доход по услугам и расходы</figcaption></figure>
     </div>
   </div>
 </section>
@@ -423,19 +422,19 @@
       <article>
         <div class="glyph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="17" rx="3"/><path d="M3 9h18M8 2v4M16 2v4"/></svg></div>
         <h3>Услуги по записи</h3>
-        <p>Календарь со свободными окнами, напоминания клиентам, онлайн-запись в боте, абонементы и групповые занятия.</p>
+        <p>Для мастеров, специалистов и преподавателей, которые работают по расписанию.</p>
         <div class="tags"><span>красота</span><span>здоровье</span><span>обучение</span><span>консультации</span><span>фото</span></div>
       </article>
       <article>
         <div class="glyph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2l-2 4v14a2 2 0 002 2h12a2 2 0 002-2V6l-2-4z"/><path d="M4 6h16M16 10a4 4 0 01-8 0"/></svg></div>
         <h3>Товары и заказы</h3>
-        <p>Заявки, сделки по этапам, заказы с позициями, предоплата и остаток, сроки и долги.</p>
+        <p>Для тех, кто принимает заказы на товары или ведёт проекты для клиентов.</p>
         <div class="tags"><span>изделия</span><span>ремонт</span><span>IT</span><span>проекты</span></div>
       </article>
       <article>
         <div class="glyph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10l9-7 9 7v10a1 1 0 01-1 1H4a1 1 0 01-1-1z"/><path d="M9 21v-9h6v9"/></svg></div>
         <h3>Аренда</h3>
-        <p>Свой календарь у каждого объекта, брони на несколько дней с ценой за сутки, неделю или месяц, залог отдельно от оплаты.</p>
+        <p>Для посуточной и долгосрочной аренды квартир, техники и вещей.</p>
         <div class="tags"><span>квартиры</span><span>техника</span><span>вещи</span></div>
       </article>
     </div>
@@ -452,9 +451,7 @@
     <ol class="day">
       <li><time>09:00</time><i class="pin"></i><div><b>Клиент пишет боту по вашей ссылке</b><span>Сообщение приходит в CRM, вам — уведомление. Заявка создаётся сама.</span></div></li>
       <li><time>11:00</time><i class="pin"></i><div><b>Забыли ответить</b><span>Прочитали и не ответили — через 2 часа бот напомнит. Ночью не беспокоит.</span></div></li>
-      <li><time>12:00</time><i class="pin"></i><div><b>Напоминание о чеках</b><span>Если для оплаты нужен чек, CRM напоминает о нём списком в 12:00, 16:00 и 20:00 с учётом тихих часов. Чек вы выставляете сами в налоговом сервисе, затем отмечаете его в CRM.</span></div></li>
       <li><time>15:00</time><i class="pin"></i><div><b>Визит</b><span>После подтверждения клиент получает сообщение о записи; напоминание отправляется по вашим настройкам. После визита вы отмечаете «Пришли» и оплату.</span></div></li>
-      <li><time>20:00</time><i class="pin"></i><div><b>Итоги дня</b><span>По умолчанию бот присылает визиты дня без отметки с кнопкой «Все пришли».</span></div></li>
     </ol>
   </div>
 </section>
