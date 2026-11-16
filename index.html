@@ -329,6 +329,12 @@
   .shot { border-radius: 30px; padding: 8px; background: linear-gradient(160deg, #1c3a8a, #0a1847);
     box-shadow: 0 30px 60px -30px rgba(0, 0, 0, .8), 0 0 0 1px rgba(140, 200, 255, .25); }
   .shot img { width: 100%; height: auto; border-radius: 23px; }
+  .screen-viewer { width: min(640px, calc(100% - 24px)); max-width: none; max-height: calc(100% - 24px); padding: 16px; border: 1px solid var(--panel-line); border-radius: 20px; background: var(--ink-2); color: var(--sky); }
+  .screen-viewer::backdrop { background: rgba(0, 5, 25, .85); }
+  .screen-viewer header { position: sticky; top: -16px; z-index: 1; display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 12px 0; margin: -12px 0 12px; background: var(--ink-2); }
+  .screen-viewer h2 { font: 600 18px/1.3 var(--body); }
+  .screen-viewer button { min-height: 44px; padding: 0 16px; border: 1px solid var(--panel-line); border-radius: 12px; background: var(--panel); color: var(--sky); font: 600 16px/1 var(--body); cursor: pointer; }
+  .screen-viewer img { width: min(100%, 585px); height: auto; margin: auto; border-radius: 12px; }
   .shots figcaption { color: var(--mist); font-size: 15px; }
   .shots figcaption b { display: block; color: var(--sky); font-weight: 600; }
   @media (max-width: 700px) { .shots { grid-auto-columns: 72%; } }
@@ -406,7 +412,7 @@
     <div class="head">
       <span class="eyebrow">Приложение</span>
       <h2>Так выглядит CRM в Telegram</h2>
-      <p class="lead">Экраны с тестовыми данными. Нажмите на изображение, чтобы открыть его целиком.</p>
+      <p class="lead">Экраны с тестовыми данными. Нажмите на изображение, чтобы увеличить его.</p>
     </div>
     <div class="shots" tabindex="0" role="region" aria-label="Экраны приложения; прокрутите для просмотра">
       <figure><a class="shot" href="/img/app/calendar.webp" aria-label="Открыть полный экран записей"><img src="/img/app/calendar.webp" width="585" height="1200" alt="Календарь записей на день со свободными окнами" loading="lazy"></a><figcaption><b>Записи</b>Календарь дня, свободные окна и загрузка</figcaption></figure>
@@ -605,6 +611,11 @@
 
 <div class="sticky-cta" id="sticky-cta"><a class="btn" href="https://t.me/sologram_crm_bot?start=site" data-goal="open_bot" rel="noopener">Открыть бота · 7 дней бесплатно</a></div>
 
+<dialog class="screen-viewer" id="screen-viewer" aria-labelledby="screen-viewer-title">
+  <header><h2 id="screen-viewer-title">Экран приложения</h2><button type="button" id="screen-viewer-close">Закрыть</button></header>
+  <img id="screen-viewer-image" alt="" width="585" height="1200">
+</dialog>
+
 <script>
   (function () {
     // Yandex Metrica counter: loaded by consent.js once the visitor accepts cookies.
@@ -613,6 +624,25 @@
       var a = e.target.closest && e.target.closest("[data-goal]");
       if (a && YM_ID && typeof window.ym === "function") window.ym(YM_ID, "reachGoal", a.getAttribute("data-goal"));
     });
+    var viewer = document.getElementById("screen-viewer");
+    var viewerImage = document.getElementById("screen-viewer-image");
+    var viewerTitle = document.getElementById("screen-viewer-title");
+    var viewerClose = document.getElementById("screen-viewer-close");
+    if (viewer && typeof viewer.showModal === "function") {
+      document.querySelector(".shots").addEventListener("click", function (event) {
+        var link = event.target.closest("a.shot");
+        if (!link || event.defaultPrevented || event.button !== 0 || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+        var image = link.querySelector("img");
+        if (!image) return;
+        event.preventDefault();
+        viewerImage.src = link.href;
+        viewerImage.alt = image.alt;
+        viewerTitle.textContent = link.closest("figure").querySelector("figcaption b").textContent;
+        viewer.showModal();
+        viewerClose.focus();
+      });
+      viewerClose.addEventListener("click", function () { viewer.close(); });
+    }
     var hero = document.getElementById("hero-cta"), bar = document.getElementById("sticky-cta");
     if (hero && bar && "IntersectionObserver" in window) {
       new IntersectionObserver(function (entries) {
