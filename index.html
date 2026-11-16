@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>SoloGram — CRM для самозанятых и малого бизнеса в Telegram</title>
-<meta name="description" content="CRM для самозанятых и малого бизнеса в Telegram: клиенты, переписка, записи, заказы, оплаты и напоминания о чеках и налогах в одном боте. Страны СНГ. 7 дней бесплатно.">
+<meta name="description" content="CRM для самозанятых и малого бизнеса в Telegram: клиенты, переписка, записи, заказы, оплаты и напоминания о чеках и налогах в одном боте. Беларусь, Россия, Казахстан и другие страны СНГ. 7 дней бесплатно.">
 <link rel="canonical" href="https://sologram.pro/">
 <link rel="alternate" hreflang="ru" href="https://sologram.pro/">
 <link rel="alternate" hreflang="x-default" href="https://sologram.pro/">
@@ -68,7 +68,7 @@
    "publisher": {
     "@id": "https://sologram.pro/#org"
    },
-   "description": "CRM для самозанятых и малого бизнеса в Telegram: клиенты, переписка, записи, заказы, оплаты и напоминания о чеках и налогах. Страны СНГ.",
+   "description": "CRM для самозанятых и малого бизнеса в Telegram: клиенты, переписка, записи, заказы, оплаты и напоминания о чеках и налогах. Беларусь, Россия и другие страны СНГ.",
    "offers": [
     {
      "@type": "Offer",
@@ -122,7 +122,7 @@
      "name": "Что будет после 7 бесплатных дней?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Ничего не спишется: подписки нет, пока вы сами её не оформите. После пробного периода есть ещё 2 дня, когда всё работает как прежде. Если подписку не оформить, CRM переходит в режим просмотра. Сохраняется и работает: все данные (клиенты, история, записи, заказы, оплаты), чтение чатов, «Сводка», отметка чеков, счета и акты PDF, поддержка. Новые сообщения клиентов продолжают поступать в CRM. Становится недоступно: ответы клиентам, новые записи, заказы и заявки, отметка оплат, изменение данных и настроек. Онлайн-запись в боте закрывается, напоминания клиентам и автоответ не отправляются. Оформили подписку — всё снова работает сразу, с теми же данными."
+      "text": "Ничего не спишется: подписки нет, пока вы сами её не оформите. После пробного периода есть ещё 2 дня, когда всё работает как прежде. Если подписку не оформить, CRM переходит в режим просмотра. Сохраняется и работает: все данные (клиенты, история, записи, заказы, оплаты), чтение чатов, «Сводка», отметка чеков, счета и акты PDF, поддержка. Новые сообщения клиентов продолжают приходить в CRM, ни одно не потеряется. Становится недоступно: ответы клиентам, новые записи, заказы и заявки, отметка оплат, изменение данных и настроек. Онлайн-запись в боте закрывается, напоминания клиентам и автоответ не отправляются. Оформили подписку — всё снова работает сразу, с теми же данными."
      }
     },
     {
@@ -146,7 +146,7 @@
      "name": "Кто видит мои данные?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Вход — через ваш аккаунт Telegram; сотрудников и общего доступа в CRM нет. Данные банковских карт и пароли от государственных сервисов не хранятся. Об обработке данных — в политике конфиденциальности."
+      "text": "Только вы. Вход через ваш аккаунт Telegram, общего доступа нет. Данные банковских карт и пароли от государственных сервисов не хранятся."
      }
     },
     {
@@ -209,7 +209,7 @@
   .btn svg { width: 22px; height: 22px; flex: none; }
   .btn.line { background: transparent; color: var(--sky); box-shadow: inset 0 0 0 1.5px var(--panel-line); }
   .btn.line:hover { box-shadow: inset 0 0 0 1.5px var(--cyan); }
-  .btn.sm { min-height: 44px; padding: 0 16px; font-size: 15px; border-radius: 12px; }
+  .btn.sm { min-height: 42px; padding: 0 16px; font-size: 15px; border-radius: 12px; }
 
   /* Header */
   header.top { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20; background: rgba(3, 13, 51, .78);
@@ -230,7 +230,7 @@
   .flight path { fill: none; stroke: url(#ribbon); stroke-width: 2.2; stroke-linecap: round; stroke-dasharray: 2600; stroke-dashoffset: 0; animation: fly 2.4s ease-out both; opacity: .55; }
   @keyframes fly { from { stroke-dashoffset: 2600; } to { stroke-dashoffset: 0; } }
   .hero .wrap { display: grid; gap: 48px; align-items: center; }
-  @media (min-width: 960px) { .hero { padding-block: 52px 64px; } .hero .wrap { grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); } }
+  @media (min-width: 960px) { .hero { padding-block: 88px 104px; } .hero .wrap { grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); } }
   .hero-copy { display: grid; gap: 22px; min-width: 0; }
   h1 .kicker { display: block; margin-bottom: 22px; font-family: var(--body); line-height: 1.4; }
   h1 { font-size: clamp(28px, 4vw, 46px); line-height: 1.06; letter-spacing: -.02em; }
@@ -239,20 +239,40 @@
   .facts li { font-size: 14px; color: var(--mist); padding: 7px 13px; border-radius: 999px; background: rgba(140, 200, 255, .07); box-shadow: inset 0 0 0 1px var(--panel-line); }
   .facts b { color: var(--sky); font-weight: 600; }
 
-  /* A real app screen makes the product visible before visitors scroll. */
-  .stage { justify-self: center; width: min(260px, 100%); margin: 0; }
-  .hero-screen { padding: 9px; border-radius: 32px; background: linear-gradient(160deg, #1c3a8a, #0a1847);
-    box-shadow: 0 36px 72px -28px rgba(0, 0, 0, .8), 0 0 0 1px rgba(140, 200, 255, .25), 0 0 90px -20px rgba(57, 160, 255, .4); }
-  .hero-screen img { width: 100%; height: auto; border-radius: 24px; }
-  .stage figcaption { margin-top: 14px; color: var(--mist); font-size: 14px; text-align: center; }
-  @media (max-width: 520px) { .flight { display: none; } .stage { width: min(260px, 100%); } }
+  /* Phone: a client writes, the CRM answers and plans the visit. */
+  .stage { position: relative; justify-self: center; width: min(340px, 100%); }
+  .phone { position: relative; border-radius: 42px; padding: 11px; background: linear-gradient(160deg, #1c3a8a, #0a1847);
+    box-shadow: 0 40px 80px -30px rgba(0, 0, 0, .8), 0 0 0 1px rgba(140, 200, 255, .25), 0 0 90px -20px rgba(57, 160, 255, .55); }
+  .screen { border-radius: 32px; overflow: hidden; background: #0e1c3d; color: #e9f4ff; font-size: 14px; line-height: 1.4; }
+  .chat-head { display: flex; align-items: center; gap: 10px; padding: 16px 16px 12px; background: #13254f; }
+  .chat-head img { width: 34px; height: 34px; border-radius: 50%; }
+  .chat-head b { display: block; font-size: 14px; }
+  .chat-head small { color: #8fa6cf; font-size: 12px; }
+  .msgs { display: grid; gap: 8px; padding: 14px 12px 16px; background: radial-gradient(120% 80% at 50% 0%, #142a5c, #0b1733); }
+  .msg { max-width: 84%; padding: 9px 12px; border-radius: 16px; font-size: 13.5px; }
+  .msg.in { justify-self: start; background: #1d3266; border-bottom-left-radius: 5px; }
+  .msg.out { justify-self: end; background: #2b6fe6; border-bottom-right-radius: 5px; }
+  .msg time { display: block; text-align: right; font-size: 11px; color: rgba(233, 244, 255, .55); margin-top: 2px; }
+  .card-msg { justify-self: start; width: 88%; background: #1d3266; border-radius: 16px; border-bottom-left-radius: 5px; overflow: hidden; font-size: 13px; }
+  .card-msg p { margin: 0; padding: 10px 12px 8px; }
+  .card-msg .kb { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: rgba(140, 200, 255, .15); }
+  .card-msg .kb span { background: #213a74; text-align: center; padding: 8px; color: #7fd8ff; font-weight: 600; font-size: 12.5px; }
+  .compose { display: flex; align-items: center; gap: 8px; padding: 10px 12px 14px; background: #13254f; color: #6f86b3; font-size: 13px; }
+  .compose span { flex: 1; padding: 8px 12px; border-radius: 18px; background: #0b1733; }
+  .float { position: absolute; right: -18px; bottom: -22px; width: 210px; padding: 14px 15px; border-radius: 18px;
+    background: rgba(11, 34, 99, .92); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 20px 40px -16px rgba(0, 0, 0, .7), inset 0 0 0 1px rgba(140, 200, 255, .25); font-size: 13px; animation: bob 6s ease-in-out infinite; }
+  .float .k { font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: var(--mist); }
+  .float .v { font: 600 22px/1.2 var(--display); margin: 4px 0 8px; font-variant-numeric: tabular-nums; color: var(--ok); transition: opacity .3s; }
+  .float .row { display: flex; justify-content: space-between; gap: 8px; color: var(--mist); padding-top: 6px; border-top: 1px solid var(--panel-line); }
+  .float .row + .row { margin-top: 6px; }
+  .dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--ok); margin-right: 6px; vertical-align: 1px; }
+  .dot.w { background: var(--warn); }
+  @keyframes bob { 50% { transform: translateY(-8px); } }
+  @media (max-width: 520px) { .float { right: -4px; bottom: -40px; width: 190px; } .stage { margin-bottom: 36px; } .flight { display: none; } }
 
-  section { padding-block: clamp(56px, 7vw, 80px); scroll-margin-top: 82px; }
+  section { padding-block: 80px; }
   .band { background: linear-gradient(180deg, var(--ink-2), var(--ink)); border-top: 1px solid var(--panel-line); }
-
-  /* Keep the gallery and its following section visually connected. */
-  #screens { padding-bottom: clamp(40px, 5vw, 64px); }
-  #who { padding-top: clamp(40px, 5vw, 64px); }
 
   /* Who it is for */
   .who { display: grid; gap: 16px; }
@@ -281,7 +301,6 @@
   @media (min-width: 1040px) { .bento { grid-template-columns: repeat(3, minmax(0, 1fr)); } .bento .wide { grid-column: span 2; } }
   .bento article { display: grid; gap: 10px; align-content: start; padding: 26px; border-radius: var(--r); background: var(--panel); box-shadow: inset 0 0 0 1px var(--panel-line); min-width: 0; }
   .bento article p { margin: 0; color: var(--mist); }
-  .bento article:not(.wide) { background: rgba(11, 34, 99, .72); }
   .bento .wide { background: radial-gradient(90% 120% at 100% 0%, rgba(47, 123, 255, .35), transparent 60%), var(--panel); }
   .mini { display: grid; gap: 8px; margin-top: 10px; }
   .mini div { display: flex; justify-content: space-between; gap: 12px; padding: 10px 14px; border-radius: 12px; background: rgba(3, 13, 51, .55); font-size: 15px; }
@@ -322,33 +341,12 @@
 
   /* Final call */
   /* Real app screens: a row of phones, swiped on narrow screens. */
-  .shots { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(260px, 1fr); gap: 20px; overflow-x: auto;
+  .shots { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(220px, 1fr); gap: 20px; overflow-x: auto;
     scroll-snap-type: x mandatory; padding-bottom: 12px; margin: 0; }
-  .shots:focus-visible { outline-offset: 4px; }
   .shots figure { margin: 0; scroll-snap-align: start; display: grid; gap: 14px; align-content: start; }
   .shot { border-radius: 30px; padding: 8px; background: linear-gradient(160deg, #1c3a8a, #0a1847);
     box-shadow: 0 30px 60px -30px rgba(0, 0, 0, .8), 0 0 0 1px rgba(140, 200, 255, .25); }
   .shot img { width: 100%; height: auto; border-radius: 23px; }
-  .screen-viewer { width: min(640px, calc(100% - 24px)); max-width: none; max-height: calc(100% - 24px); padding: 16px; border: 1px solid var(--panel-line); border-radius: 20px; background: var(--ink-2); color: var(--sky); }
-  .screen-viewer::backdrop { background: rgba(0, 5, 25, .85); }
-  .screen-viewer header { position: sticky; top: -16px; z-index: 1; display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 12px 0; margin: -12px 0 12px; background: var(--ink-2); }
-  .screen-viewer h2 { font: 600 18px/1.3 var(--body); }
-  .screen-viewer button { min-height: 44px; padding: 0 16px; border: 1px solid var(--panel-line); border-radius: 12px; background: var(--panel); color: var(--sky); font: 600 16px/1 var(--body); cursor: pointer; }
-  .screen-viewer img { width: min(100%, 585px); height: auto; margin: auto; border-radius: 12px; }
-  .activity-demo { margin-top: clamp(42px, 6vw, 72px); display: grid; grid-template-columns: minmax(0, 1fr); gap: 28px; align-items: start; }
-  @media (min-width: 760px) { .activity-demo { grid-template-columns: minmax(0, 1fr) minmax(230px, 330px); gap: 56px; } }
-  .activity-demo h3 { margin-bottom: 12px; }
-  .activity-demo p { color: var(--mist); margin: 0 0 18px; max-width: 32em; }
-  .activity-picker { display: grid; gap: 8px; max-width: 380px; }
-  .activity-picker[hidden] { display: none; }
-  .activity-picker label { font-weight: 600; }
-  .activity-picker select { width: 100%; min-height: 48px; padding: 10px 14px; color: var(--sky); background: var(--panel); border: 1px solid var(--panel-line); border-radius: 12px; font: inherit; }
-  .activity-shots { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
-  .activity-shots figure { margin: 0; display: grid; gap: 12px; align-content: start; }
-  .activity-shots figure[hidden] { display: none; }
-  .activity-shots .shot img { aspect-ratio: 390 / 510; object-fit: cover; object-position: top; }
-  .activity-shots figcaption { color: var(--mist); font-size: 15px; }
-  .activity-shots figcaption b { display: block; color: var(--sky); }
   .shots figcaption { color: var(--mist); font-size: 15px; }
   .shots figcaption b { display: block; color: var(--sky); font-weight: 600; }
   @media (max-width: 700px) { .shots { grid-auto-columns: 72%; } }
@@ -371,7 +369,7 @@
     padding: 12px max(12px, env(safe-area-inset-right, 0px)) calc(12px + env(safe-area-inset-bottom, 0px)) max(12px, env(safe-area-inset-left, 0px));
     background: linear-gradient(180deg, transparent, rgba(3, 13, 51, .95) 40%); }
   .sticky-cta .btn { width: 100%; }
-  @media (max-width: 899px) { html { scroll-padding-bottom: 100px; } .sticky-cta.show { display: block; } footer { padding-bottom: calc(96px + env(safe-area-inset-bottom, 0px)); } }
+  @media (max-width: 899px) { .sticky-cta.show { display: block; } footer { padding-bottom: calc(96px + env(safe-area-inset-bottom, 0px)); } }
 </style>
 </head>
 <body>
@@ -414,10 +412,26 @@
       </ul>
     </div>
 
-    <figure class="stage">
-      <div class="hero-screen"><img src="/img/demo/hero.jpg" width="390" height="844" fetchpriority="high" alt="Главная CRM: задачи на сегодня и чаты с клиентами"></div>
-      <figcaption>Экран приложения с тестовыми данными</figcaption>
-    </figure>
+    <div class="stage" aria-hidden="true">
+      <div class="phone">
+        <div class="screen">
+          <div class="chat-head"><img src="/img/logo-128.webp" width="34" height="34" alt=""><div><b>Студия «Лето»</b><small>ответы через бота SoloGram</small></div></div>
+          <div class="msgs">
+            <div class="msg in">Здравствуйте! Можно на пятницу после обеда?<time>13:02</time></div>
+            <div class="msg out">Да, есть 15:00 и 16:30. Записать?<time>13:05</time></div>
+            <div class="msg in">Давайте на 15:00<time>13:06</time></div>
+            <div class="card-msg"><p>Вы записаны: <b>пт, 30 октября, 15:00</b>. Накануне напомним.</p><div class="kb"><span>Перенести</span><span>Отменить</span></div></div>
+          </div>
+          <div class="compose"><span>Сообщение</span></div>
+        </div>
+      </div>
+      <div class="float">
+        <div class="k">Заработано сегодня</div>
+        <div class="v" id="earned" data-alt="+ 240 BYN|+ 45 000 ₸">+ 7 500 ₽</div>
+        <div class="row"><span><i class="dot"></i>Визиты оплачены</span><span>5/6</span></div>
+        <div class="row"><span><i class="dot w"></i>Чеки к выставлению</span><span>1</span></div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -426,28 +440,13 @@
     <div class="head">
       <span class="eyebrow">Приложение</span>
       <h2>Так выглядит CRM в Telegram</h2>
-      <p class="lead">Экраны с тестовыми данными. Нажмите на изображение, чтобы увеличить его.</p>
+      <p class="lead">Настоящие экраны приложения, заполненные тестовыми данными. Открываются кнопкой «Открыть CRM» в боте на телефоне и компьютере.</p>
     </div>
-    <div class="shots" tabindex="0" role="region" aria-label="Экраны приложения; прокрутите для просмотра">
-      <figure><a class="shot" href="/img/app/calendar.webp" aria-label="Открыть полный экран записей"><img src="/img/app/calendar.webp" width="585" height="1200" alt="Календарь записей на день со свободными окнами" loading="lazy"></a><figcaption><b>Записи</b>Календарь дня, свободные окна и загрузка</figcaption></figure>
-      <figure><a class="shot" href="/img/app/customer.webp" aria-label="Открыть полный экран карточки клиента"><img src="/img/app/customer.webp" width="585" height="1200" alt="Карточка клиента с визитами, заказами и оплатами" loading="lazy"></a><figcaption><b>Клиент</b>Контакты, визиты, заказы и оплаты в одной карточке</figcaption></figure>
-      <figure><a class="shot" href="/img/app/summary.webp" aria-label="Открыть полный экран сводки"><img src="/img/app/summary.webp" width="585" height="1200" alt="Сводка: оплаты, средний чек и доход по услугам" loading="lazy"></a><figcaption><b>Сводка</b>Оплаты, средний чек, доход по услугам и расходы</figcaption></figure>
-    </div>
-    <div class="activity-demo">
-      <div><h3>Примеры для вашего дела</h3><p>Выберите направление и посмотрите, как могут выглядеть услуги и товары в CRM. Все названия и цены вымышлены.</p><div class="activity-picker" hidden><label for="activity-choice">Вид деятельности</label><select id="activity-choice"><option value="services">Услуги</option><option value="beauty">Красота и уход</option><option value="repair">Ремонт</option><option value="consulting">Консультации</option><option value="education">Обучение</option><option value="online_services">Онлайн-услуги</option><option value="sales">Продажа товаров</option><option value="photo_video">Фото и видео</option><option value="it_digital">IT и digital</option><option value="rental">Аренда</option><option value="handmade">Изделия ручной работы</option><option value="home_services">Бытовые услуги</option><option value="other">Другое</option></select></div></div>
-      <div class="activity-shots"><figure data-activity="services"><a class="shot" href="/img/demo/services.jpg" aria-label="Увеличить пример: Услуги"><img src="/img/demo/services.jpg" width="390" height="844" alt="Пример каталога CRM: Услуги" loading="lazy"></a><figcaption><b>Услуги</b>Вымышленные услуги и товары в CRM</figcaption></figure>
-      <figure data-activity="beauty"><a class="shot" href="/img/demo/beauty.jpg" aria-label="Увеличить пример: Красота и уход"><img src="/img/demo/beauty.jpg" width="390" height="844" alt="Пример каталога CRM: Красота и уход" loading="lazy"></a><figcaption><b>Красота и уход</b>Вымышленные услуги и товары в CRM</figcaption></figure>
-      <figure data-activity="repair"><a class="shot" href="/img/demo/repair.jpg" aria-label="Увеличить пример: Ремонт"><img src="/img/demo/repair.jpg" width="390" height="844" alt="Пример каталога CRM: Ремонт" loading="lazy"></a><figcaption><b>Ремонт</b>Вымышленные услуги и товары в CRM</figcaption></figure>
-      <figure data-activity="consulting"><a class="shot" href="/img/demo/consulting.jpg" aria-label="Увеличить пример: Консультации"><img src="/img/demo/consulting.jpg" width="390" height="844" alt="Пример каталога CRM: Консультации" loading="lazy"></a><figcaption><b>Консультации</b>Вымышленные услуги и товары в CRM</figcaption></figure>
-      <figure data-activity="education"><a class="shot" href="/img/demo/education.jpg" aria-label="Увеличить пример: Обучение"><img src="/img/demo/education.jpg" width="390" height="844" alt="Пример каталога CRM: Обучение" loading="lazy"></a><figcaption><b>Обучение</b>Вымышленные услуги и товары в CRM</figcaption></figure>
-      <figure data-activity="online_services"><a class="shot" href="/img/demo/online_services.jpg" aria-label="Увеличить пример: Онлайн-услуги"><img src="/img/demo/online_services.jpg" width="390" height="844" alt="Пример каталога CRM: Онлайн-услуги" loading="lazy"></a><figcaption><b>Онлайн-услуги</b>Вымышленные услуги и товары в CRM</figcaption></figure>
-      <figure data-activity="sales"><a class="shot" href="/img/demo/sales.jpg" aria-label="Увеличить пример: Продажа товаров"><img src="/img/demo/sales.jpg" width="390" height="844" alt="Пример каталога CRM: Продажа товаров" loading="lazy"></a><figcaption><b>Продажа товаров</b>Вымышленные услуги и товары в CRM</figcaption></figure>
-      <figure data-activity="photo_video"><a class="shot" href="/img/demo/photo_video.jpg" aria-label="Увеличить пример: Фото и видео"><img src="/img/demo/photo_video.jpg" width="390" height="844" alt="Пример каталога CRM: Фото и видео" loading="lazy"></a><figcaption><b>Фото и видео</b>Вымышленные услуги и товары в CRM</figcaption></figure>
-      <figure data-activity="it_digital"><a class="shot" href="/img/demo/it_digital.jpg" aria-label="Увеличить пример: IT и digital"><img src="/img/demo/it_digital.jpg" width="390" height="844" alt="Пример каталога CRM: IT и digital" loading="lazy"></a><figcaption><b>IT и digital</b>Вымышленные услуги и товары в CRM</figcaption></figure>
-      <figure data-activity="rental"><a class="shot" href="/img/demo/rental.jpg" aria-label="Увеличить пример: Аренда"><img src="/img/demo/rental.jpg" width="390" height="844" alt="Пример каталога CRM: Аренда" loading="lazy"></a><figcaption><b>Аренда</b>Вымышленные услуги и товары в CRM</figcaption></figure>
-      <figure data-activity="handmade"><a class="shot" href="/img/demo/handmade.jpg" aria-label="Увеличить пример: Изделия ручной работы"><img src="/img/demo/handmade.jpg" width="390" height="844" alt="Пример каталога CRM: Изделия ручной работы" loading="lazy"></a><figcaption><b>Изделия ручной работы</b>Вымышленные услуги и товары в CRM</figcaption></figure>
-      <figure data-activity="home_services"><a class="shot" href="/img/demo/home_services.jpg" aria-label="Увеличить пример: Бытовые услуги"><img src="/img/demo/home_services.jpg" width="390" height="844" alt="Пример каталога CRM: Бытовые услуги" loading="lazy"></a><figcaption><b>Бытовые услуги</b>Вымышленные услуги и товары в CRM</figcaption></figure>
-      <figure data-activity="other"><a class="shot" href="/img/demo/other.jpg" aria-label="Увеличить пример: Другое"><img src="/img/demo/other.jpg" width="390" height="844" alt="Пример каталога CRM: Другое" loading="lazy"></a><figcaption><b>Другое</b>Вымышленные услуги и товары в CRM</figcaption></figure></div>
+    <div class="shots">
+      <figure><div class="shot"><img src="/img/app/home.webp" width="585" height="1200" alt="Главная: что требует внимания сегодня и список чатов" loading="lazy"></div><figcaption><b>Главная</b>Что требует внимания сегодня и все чаты с клиентами</figcaption></figure>
+      <figure><div class="shot"><img src="/img/app/calendar.webp" width="585" height="1200" alt="Календарь записей на день со свободными окнами" loading="lazy"></div><figcaption><b>Записи</b>Календарь дня, свободные окна и загрузка</figcaption></figure>
+      <figure><div class="shot"><img src="/img/app/customer.webp" width="585" height="1200" alt="Карточка клиента с визитами, заказами и оплатами" loading="lazy"></div><figcaption><b>Клиент</b>Контакты, визиты, заказы и оплаты в одной карточке</figcaption></figure>
+      <figure><div class="shot"><img src="/img/app/summary.webp" width="585" height="1200" alt="Сводка: оплаты, средний чек и доход по услугам" loading="lazy"></div><figcaption><b>Сводка</b>Оплаты, средний чек, доход по услугам и расходы</figcaption></figure>
     </div>
   </div>
 </section>
@@ -463,19 +462,19 @@
       <article>
         <div class="glyph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="17" rx="3"/><path d="M3 9h18M8 2v4M16 2v4"/></svg></div>
         <h3>Услуги по записи</h3>
-        <p>Для мастеров, специалистов и преподавателей, которые работают по расписанию.</p>
+        <p>Календарь со свободными окнами, напоминания клиентам, онлайн-запись в боте, абонементы и групповые занятия.</p>
         <div class="tags"><span>красота</span><span>здоровье</span><span>обучение</span><span>консультации</span><span>фото</span></div>
       </article>
       <article>
         <div class="glyph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2l-2 4v14a2 2 0 002 2h12a2 2 0 002-2V6l-2-4z"/><path d="M4 6h16M16 10a4 4 0 01-8 0"/></svg></div>
         <h3>Товары и заказы</h3>
-        <p>Для тех, кто принимает заказы на товары или ведёт проекты для клиентов.</p>
+        <p>Заявки, сделки по этапам, заказы с позициями, предоплата и остаток, сроки и долги.</p>
         <div class="tags"><span>изделия</span><span>ремонт</span><span>IT</span><span>проекты</span></div>
       </article>
       <article>
         <div class="glyph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10l9-7 9 7v10a1 1 0 01-1 1H4a1 1 0 01-1-1z"/><path d="M9 21v-9h6v9"/></svg></div>
         <h3>Аренда</h3>
-        <p>Для посуточной и долгосрочной аренды квартир, техники и вещей.</p>
+        <p>Свой календарь у каждого объекта, брони на несколько дней с ценой за сутки, неделю или месяц, залог отдельно от оплаты.</p>
         <div class="tags"><span>квартиры</span><span>техника</span><span>вещи</span></div>
       </article>
     </div>
@@ -487,12 +486,14 @@
     <div class="head">
       <span class="eyebrow">Один день</span>
       <h2>Бот помнит за вас</h2>
-      <p class="lead">Вы работаете с клиентами, а SoloGram помогает следить за сообщениями, визитами и чеками.</p>
+      <p class="lead">Вы работаете с клиентами, а SoloGram следит, чтобы ничего не потерялось: ни сообщение, ни визит, ни чек.</p>
     </div>
     <ol class="day">
-      <li><time>09:00</time><i class="pin"></i><div><b>Клиент пишет боту по вашей ссылке</b><span>Сообщение приходит в CRM, вам — уведомление. Первое сообщение нового клиента создаёт заявку; для постоянного клиента открывается чат.</span></div></li>
-      <li><time>11:00</time><i class="pin"></i><div><b>Забыли ответить</b><span>Прочитали и не ответили — через 2 часа бот напомнит, с учётом ночного времени и тихих часов.</span></div></li>
-      <li><time>15:00</time><i class="pin"></i><div><b>Визит</b><span>После подтверждения клиент получает сообщение о записи; напоминание отправляется по вашим настройкам. После визита вы отмечаете «Пришли» и оплату.</span></div></li>
+      <li><time>09:00</time><i class="pin"></i><div><b>Клиент пишет боту по вашей ссылке</b><span>Сообщение приходит в CRM, вам — уведомление. Заявка создаётся сама.</span></div></li>
+      <li><time>11:00</time><i class="pin"></i><div><b>Забыли ответить</b><span>Прочитали и не ответили — через 2 часа бот напомнит. Ночью не беспокоит.</span></div></li>
+      <li><time>12:00</time><i class="pin"></i><div><b>Напоминание о чеках</b><span>После каждой оплаты CRM напоминает выставить чек и присылает список одним сообщением в 12:00, 16:00 и 20:00. Чек вы выставляете сами в налоговом сервисе, затем отмечаете его в CRM.</span></div></li>
+      <li><time>15:00</time><i class="pin"></i><div><b>Визит</b><span>Клиент получил «Вы записаны» и напоминание накануне. После визита вы отмечаете «Пришли» и оплату.</span></div></li>
+      <li><time>20:00</time><i class="pin"></i><div><b>Итоги дня</b><span>Бот присылает визиты дня без отметки с кнопкой «Все пришли» и напоминает клиентам о завтрашних записях.</span></div></li>
     </ol>
   </div>
 </section>
@@ -515,7 +516,7 @@
       </article>
       <article>
         <h3>Все чаты в одном месте</h3>
-        <p>Отвечайте текстом и фотографиями, используйте быстрые ответы. Голосовые, видео и документы клиентов открываются в CRM. С Telegram Business сюда попадает и переписка из личных сообщений.</p>
+        <p>Ответ уходит клиенту в Telegram. Быстрые ответы, фото, голосовые. С Telegram Business переписка из личных сообщений тоже попадает в CRM.</p>
       </article>
       <article>
         <h3>Онлайн-запись в боте</h3>
@@ -523,13 +524,13 @@
       </article>
       <article>
         <h3>Заказы и оплаты</h3>
-        <p>Наличные, карта или перевод: вы отмечаете оплату, CRM считает остаток и долги. Суммы — в валюте вашей страны. Возвраты, счёт и акт в PDF.</p>
+        <p>Наличные, карта или перевод: вы отмечаете оплату, CRM считает остаток и долги. Суммы в валюте вашей страны: рубли, тенге, сумы, сомы, сомони, драмы, манаты, леи, лари. Возвраты, счёт и акт в PDF.</p>
       </article>
       <article>
         <h3>Напоминания о чеках и налоговых сроках</h3>
         <p>SoloGram помогает учитывать доходы и не забывать о необходимых действиях. Чеки вы выставляете самостоятельно в официальном налоговом сервисе своей страны.</p>
-        <div class="chk"><span>НПД: Россия до 28-го</span><span>НПД: Беларусь до 22-го</span><span>Другой режим: свой срок и ставка</span></div>
-        <p>Для своего режима укажите срок уплаты и, по желанию, ставку. Бот напомнит об уплате и покажет доход; если указана ставка — примерную сумму налога.</p>
+        <div class="chk"><span>Уплата налога: Россия до 28-го</span><span>Беларусь до 22-го</span><span>Другие страны: свой режим, срок и ставка</span></div>
+        <p>Работаете в другой стране или как ИП? При настройке укажите свой налоговый режим, до какого числа платить и, по желанию, ставку. Бот напомнит заранее и покажет доход за период и примерную сумму налога.</p>
       </article>
       <article class="wide">
         <h3>«Сводка» показывает, на чём вы зарабатываете</h3>
@@ -548,7 +549,7 @@
     <div class="head">
       <span class="eyebrow">Как начать</span>
       <h2>Три шага до первой заявки</h2>
-      <p class="lead">Вход через аккаунт Telegram, без паролей и установок. После обязательной настройки начнутся 7 бесплатных дней; автоматически ничего не спишется.</p>
+      <p class="lead">Вход через аккаунт Telegram, без паролей и установок.</p>
     </div>
     <ol class="steps">
       <li><h3>Откройте бота</h3><span>Нажмите «Старт», затем «Открыть CRM».</span></li>
@@ -570,7 +571,7 @@
       <div class="price">
         <div class="t">Пробный период</div>
         <div class="v">7 дней <small>бесплатно</small></div>
-        <p>Начинается после обязательной настройки и предоставляется один раз на аккаунт Telegram. Оплачивать или оформлять подписку не нужно.</p>
+        <p>Все функции сразу после настройки. Не нужно ничего оплачивать, привязывать карту или оформлять подписку.</p>
       </div>
       <div class="price main">
         <div class="t">Каждый месяц</div>
@@ -609,13 +610,13 @@
       </div></details>
       <details><summary>Что будет после 7 бесплатных дней?</summary><div class="ans">
         <p>Ничего не спишется: подписки нет, пока вы сами её не оформите. После пробного периода есть ещё 2 дня, когда всё работает как прежде. Если подписку не оформить, CRM переходит в режим просмотра.</p>
-        <p><b>Сохраняется и работает:</b> все данные (клиенты, история, записи, заказы, оплаты), чтение чатов, «Сводка», отметка чеков, счета и акты PDF, поддержка. Новые сообщения клиентов продолжают поступать в CRM.</p>
+        <p><b>Сохраняется и работает:</b> все данные (клиенты, история, записи, заказы, оплаты), чтение чатов, «Сводка», отметка чеков, счета и акты PDF, поддержка. Новые сообщения клиентов продолжают приходить в CRM, ни одно не потеряется.</p>
         <p><b>Становится недоступно:</b> ответы клиентам, новые записи, заказы и заявки, отметка оплат, изменение данных и настроек. Онлайн-запись в боте закрывается, напоминания клиентам и автоответ не отправляются.</p>
         <p>Оформили подписку — всё снова работает сразу, с теми же данными.</p>
       </div></details>
       <details><summary>Нужна касса или эквайринг?</summary><p>Нет. Деньги вы принимаете как обычно и отмечаете оплату в CRM.</p></details>
       <details><summary>CRM выставляет чеки в налоговую?</summary><p>Нет. Она напоминает выставить чек и хранит отметки. Сам чек вы выставляете в «Мой налог» (Россия), в сервисе МНС (Беларусь) или в налоговом сервисе своей страны.</p></details>
-      <details><summary>Кто видит мои данные?</summary><p>Вход — через ваш аккаунт Telegram; сотрудников и общего доступа в CRM нет. Данные банковских карт и пароли от государственных сервисов не хранятся. Об обработке данных — в <a href="/privacy.html">политике конфиденциальности</a>.</p></details>
+      <details><summary>Кто видит мои данные?</summary><p>Только вы. Вход через ваш аккаунт Telegram, общего доступа нет. Данные банковских карт и пароли от государственных сервисов не хранятся.</p></details>
       <details><summary>Клиенты увидят рекламу?</summary><p>Нет. Бот не делает рассылок и не пишет клиентам от себя: только ваши ответы и сообщения, которые вы включили, например напоминания о записи. Клиент видит чат с вами, свои записи и заказы. О SoloGram ему говорит только описание бота и справка /help, которую он открывает сам: там одна строка для тех, кто захочет такую же CRM.</p></details>
     </div>
     <p class="faq-more">Подробно обо всех функциях рассказано в <a href="/guide.html">руководстве пользователя</a>.</p>
@@ -641,11 +642,6 @@
 
 <div class="sticky-cta" id="sticky-cta"><a class="btn" href="https://t.me/sologram_crm_bot?start=site" data-goal="open_bot" rel="noopener">Открыть бота · 7 дней бесплатно</a></div>
 
-<dialog class="screen-viewer" id="screen-viewer" aria-labelledby="screen-viewer-title">
-  <header><h2 id="screen-viewer-title">Экран приложения</h2><button type="button" id="screen-viewer-close">Закрыть</button></header>
-  <img id="screen-viewer-image" alt="" width="585" height="1200">
-</dialog>
-
 <script>
   (function () {
     // Yandex Metrica counter: loaded by consent.js once the visitor accepts cookies.
@@ -654,32 +650,20 @@
       var a = e.target.closest && e.target.closest("[data-goal]");
       if (a && YM_ID && typeof window.ym === "function") window.ym(YM_ID, "reachGoal", a.getAttribute("data-goal"));
     });
-    var viewer = document.getElementById("screen-viewer");
-    var viewerImage = document.getElementById("screen-viewer-image");
-    var viewerTitle = document.getElementById("screen-viewer-title");
-    var viewerClose = document.getElementById("screen-viewer-close");
-    if (viewer && typeof viewer.showModal === "function") {
-      document.querySelectorAll(".shots, .activity-shots").forEach(function (gallery) { gallery.addEventListener("click", function (event) {
-        var link = event.target.closest("a.shot");
-        if (!link || event.defaultPrevented || event.button !== 0 || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
-        var image = link.querySelector("img");
-        if (!image) return;
-        event.preventDefault();
-        viewerImage.src = link.href;
-        viewerImage.alt = image.alt;
-        viewerTitle.textContent = link.closest("figure").querySelector("figcaption b").textContent;
-        viewer.showModal();
-        viewerClose.focus();
-      }); });
-      viewerClose.addEventListener("click", function () { viewer.close(); });
-    }
-    var activityChoice = document.getElementById("activity-choice");
-    if (activityChoice) {
-      var activityFigures = document.querySelectorAll(".activity-shots figure");
-      function showActivity() { activityFigures.forEach(function (figure) { figure.hidden = figure.dataset.activity !== activityChoice.value; }); }
-      activityChoice.closest(".activity-picker").hidden = false;
-      activityChoice.addEventListener("change", showActivity);
-      showActivity();
+    // The phone's earnings card shows the currencies in turn: RUB at rest, then BYN and KZT.
+    var earned = document.getElementById("earned");
+    if (earned && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      setInterval(function () {
+        earned.style.opacity = 0;
+        setTimeout(function () {
+          var rest = earned.getAttribute("data-alt").split("|");
+          var next = rest.shift();
+          rest.push(earned.textContent);
+          earned.setAttribute("data-alt", rest.join("|"));
+          earned.textContent = next;
+          earned.style.opacity = 1;
+        }, 300);
+      }, 3500);
     }
     var hero = document.getElementById("hero-cta"), bar = document.getElementById("sticky-cta");
     if (hero && bar && "IntersectionObserver" in window) {
