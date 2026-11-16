@@ -331,7 +331,7 @@
   .shot img { width: 100%; height: auto; border-radius: 23px; }
   .screen-viewer { width: min(640px, calc(100% - 24px)); max-width: none; max-height: calc(100% - 24px); padding: 16px; border: 1px solid var(--panel-line); border-radius: 20px; background: var(--ink-2); color: var(--sky); }
   .screen-viewer::backdrop { background: rgba(0, 5, 25, .85); }
-  .screen-viewer header { display: flex; justify-content: space-between; align-items: center; gap: 16px; margin-bottom: 12px; }
+  .screen-viewer header { position: sticky; top: -16px; z-index: 1; display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 12px 0; margin: -12px 0 12px; background: var(--ink-2); }
   .screen-viewer h2 { font: 600 18px/1.3 var(--body); }
   .screen-viewer button { min-height: 44px; padding: 0 16px; border: 1px solid var(--panel-line); border-radius: 12px; background: var(--panel); color: var(--sky); font: 600 16px/1 var(--body); cursor: pointer; }
   .screen-viewer img { width: min(100%, 585px); height: auto; margin: auto; border-radius: 12px; }
