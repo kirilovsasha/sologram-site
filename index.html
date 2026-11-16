@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>SoloGram — CRM для самозанятых и малого бизнеса в Telegram</title>
-<meta name="description" content="CRM для самозанятых и малого бизнеса в Telegram: клиенты, переписка, записи, заказы, оплаты и напоминания о чеках и налогах в одном боте. Беларусь, Россия, Казахстан и другие страны СНГ. 7 дней бесплатно.">
+<meta name="description" content="CRM для самозанятых и малого бизнеса в Telegram: клиенты, переписка, записи, заказы, оплаты и напоминания о чеках и налогах в одном боте. Беларусь и Россия. 7 дней бесплатно.">
 <link rel="canonical" href="https://sologram.pro/">
 <link rel="alternate" hreflang="ru" href="https://sologram.pro/">
 <link rel="alternate" hreflang="x-default" href="https://sologram.pro/">
@@ -68,7 +68,7 @@
    "publisher": {
     "@id": "https://sologram.pro/#org"
    },
-   "description": "CRM для самозанятых и малого бизнеса в Telegram: клиенты, переписка, записи, заказы, оплаты и напоминания о чеках и налогах. Беларусь, Россия и другие страны СНГ.",
+   "description": "CRM для самозанятых и малого бизнеса в Telegram: клиенты, переписка, записи, заказы, оплаты и напоминания о чеках и налогах. Беларусь и Россия.",
    "offers": [
     {
      "@type": "Offer",
@@ -122,7 +122,7 @@
      "name": "Что будет после 7 бесплатных дней?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Ничего не спишется: подписки нет, пока вы сами её не оформите. После пробного периода есть ещё 2 дня, когда всё работает как прежде. Если подписку не оформить, CRM переходит в режим просмотра. Сохраняется и работает: все данные (клиенты, история, записи, заказы, оплаты), чтение чатов, «Сводка», отметка чеков, счета и акты PDF, поддержка. Новые сообщения клиентов продолжают приходить в CRM, ни одно не потеряется. Становится недоступно: ответы клиентам, новые записи, заказы и заявки, отметка оплат, изменение данных и настроек. Онлайн-запись в боте закрывается, напоминания клиентам и автоответ не отправляются. Оформили подписку — всё снова работает сразу, с теми же данными."
+      "text": "Ничего не спишется: подписки нет, пока вы сами её не оформите. После пробного периода есть ещё 2 дня, когда всё работает как прежде. Если подписку не оформить, CRM переходит в режим просмотра. Сохраняется и работает: все данные (клиенты, история, записи, заказы, оплаты), чтение чатов, «Сводка», отметка чеков, счета и акты PDF, поддержка. Новые сообщения клиентов продолжают поступать в CRM. Становится недоступно: ответы клиентам, новые записи, заказы и заявки, отметка оплат, изменение данных и настроек. Онлайн-запись в боте закрывается, напоминания клиентам и автоответ не отправляются. Оформили подписку — всё снова работает сразу, с теми же данными."
      }
     },
     {
@@ -146,7 +146,7 @@
      "name": "Кто видит мои данные?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Только вы. Вход через ваш аккаунт Telegram, общего доступа нет. Данные банковских карт и пароли от государственных сервисов не хранятся."
+      "text": "Вход — через ваш аккаунт Telegram; сотрудников и общего доступа в CRM нет. Данные банковских карт и пароли от государственных сервисов не хранятся. Об обработке данных — в политике конфиденциальности."
      }
     },
     {
@@ -209,7 +209,7 @@
   .btn svg { width: 22px; height: 22px; flex: none; }
   .btn.line { background: transparent; color: var(--sky); box-shadow: inset 0 0 0 1.5px var(--panel-line); }
   .btn.line:hover { box-shadow: inset 0 0 0 1.5px var(--cyan); }
-  .btn.sm { min-height: 42px; padding: 0 16px; font-size: 15px; border-radius: 12px; }
+  .btn.sm { min-height: 44px; padding: 0 16px; font-size: 15px; border-radius: 12px; }
 
   /* Header */
   header.top { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20; background: rgba(3, 13, 51, .78);
@@ -239,39 +239,15 @@
   .facts li { font-size: 14px; color: var(--mist); padding: 7px 13px; border-radius: 999px; background: rgba(140, 200, 255, .07); box-shadow: inset 0 0 0 1px var(--panel-line); }
   .facts b { color: var(--sky); font-weight: 600; }
 
-  /* Phone: a client writes, the CRM answers and plans the visit. */
-  .stage { position: relative; justify-self: center; width: min(340px, 100%); }
-  .phone { position: relative; border-radius: 42px; padding: 11px; background: linear-gradient(160deg, #1c3a8a, #0a1847);
-    box-shadow: 0 40px 80px -30px rgba(0, 0, 0, .8), 0 0 0 1px rgba(140, 200, 255, .25), 0 0 90px -20px rgba(57, 160, 255, .55); }
-  .screen { border-radius: 32px; overflow: hidden; background: #0e1c3d; color: #e9f4ff; font-size: 14px; line-height: 1.4; }
-  .chat-head { display: flex; align-items: center; gap: 10px; padding: 16px 16px 12px; background: #13254f; }
-  .chat-head img { width: 34px; height: 34px; border-radius: 50%; }
-  .chat-head b { display: block; font-size: 14px; }
-  .chat-head small { color: #8fa6cf; font-size: 12px; }
-  .msgs { display: grid; gap: 8px; padding: 14px 12px 16px; background: radial-gradient(120% 80% at 50% 0%, #142a5c, #0b1733); }
-  .msg { max-width: 84%; padding: 9px 12px; border-radius: 16px; font-size: 13.5px; }
-  .msg.in { justify-self: start; background: #1d3266; border-bottom-left-radius: 5px; }
-  .msg.out { justify-self: end; background: #2b6fe6; border-bottom-right-radius: 5px; }
-  .msg time { display: block; text-align: right; font-size: 11px; color: rgba(233, 244, 255, .55); margin-top: 2px; }
-  .card-msg { justify-self: start; width: 88%; background: #1d3266; border-radius: 16px; border-bottom-left-radius: 5px; overflow: hidden; font-size: 13px; }
-  .card-msg p { margin: 0; padding: 10px 12px 8px; }
-  .card-msg .kb { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: rgba(140, 200, 255, .15); }
-  .card-msg .kb span { background: #213a74; text-align: center; padding: 8px; color: #7fd8ff; font-weight: 600; font-size: 12.5px; }
-  .compose { display: flex; align-items: center; gap: 8px; padding: 10px 12px 14px; background: #13254f; color: #6f86b3; font-size: 13px; }
-  .compose span { flex: 1; padding: 8px 12px; border-radius: 18px; background: #0b1733; }
-  .float { position: absolute; right: -18px; bottom: -22px; width: 210px; padding: 14px 15px; border-radius: 18px;
-    background: rgba(11, 34, 99, .92); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
-    box-shadow: 0 20px 40px -16px rgba(0, 0, 0, .7), inset 0 0 0 1px rgba(140, 200, 255, .25); font-size: 13px; animation: bob 6s ease-in-out infinite; }
-  .float .k { font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: var(--mist); }
-  .float .v { font: 600 22px/1.2 var(--display); margin: 4px 0 8px; font-variant-numeric: tabular-nums; color: var(--ok); transition: opacity .3s; }
-  .float .row { display: flex; justify-content: space-between; gap: 8px; color: var(--mist); padding-top: 6px; border-top: 1px solid var(--panel-line); }
-  .float .row + .row { margin-top: 6px; }
-  .dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--ok); margin-right: 6px; vertical-align: 1px; }
-  .dot.w { background: var(--warn); }
-  @keyframes bob { 50% { transform: translateY(-8px); } }
-  @media (max-width: 520px) { .float { right: -4px; bottom: -40px; width: 190px; } .stage { margin-bottom: 36px; } .flight { display: none; } }
+  /* A real app screen makes the product visible before visitors scroll. */
+  .stage { justify-self: center; width: min(355px, 100%); margin: 0; }
+  .hero-screen { padding: 9px; border-radius: 32px; background: linear-gradient(160deg, #1c3a8a, #0a1847);
+    box-shadow: 0 36px 72px -28px rgba(0, 0, 0, .8), 0 0 0 1px rgba(140, 200, 255, .25), 0 0 90px -20px rgba(57, 160, 255, .4); }
+  .hero-screen img { width: 100%; height: auto; border-radius: 24px; }
+  .stage figcaption { margin-top: 14px; color: var(--mist); font-size: 14px; text-align: center; }
+  @media (max-width: 520px) { .flight { display: none; } .stage { width: min(300px, 100%); } }
 
-  section { padding-block: 80px; }
+  section { padding-block: clamp(56px, 7vw, 80px); scroll-margin-top: 82px; }
   .band { background: linear-gradient(180deg, var(--ink-2), var(--ink)); border-top: 1px solid var(--panel-line); }
 
   /* Who it is for */
@@ -343,6 +319,7 @@
   /* Real app screens: a row of phones, swiped on narrow screens. */
   .shots { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(220px, 1fr); gap: 20px; overflow-x: auto;
     scroll-snap-type: x mandatory; padding-bottom: 12px; margin: 0; }
+  .shots:focus-visible { outline-offset: 4px; }
   .shots figure { margin: 0; scroll-snap-align: start; display: grid; gap: 14px; align-content: start; }
   .shot { border-radius: 30px; padding: 8px; background: linear-gradient(160deg, #1c3a8a, #0a1847);
     box-shadow: 0 30px 60px -30px rgba(0, 0, 0, .8), 0 0 0 1px rgba(140, 200, 255, .25); }
@@ -369,7 +346,7 @@
     padding: 12px max(12px, env(safe-area-inset-right, 0px)) calc(12px + env(safe-area-inset-bottom, 0px)) max(12px, env(safe-area-inset-left, 0px));
     background: linear-gradient(180deg, transparent, rgba(3, 13, 51, .95) 40%); }
   .sticky-cta .btn { width: 100%; }
-  @media (max-width: 899px) { .sticky-cta.show { display: block; } footer { padding-bottom: calc(96px + env(safe-area-inset-bottom, 0px)); } }
+  @media (max-width: 899px) { html { scroll-padding-bottom: 100px; } .sticky-cta.show { display: block; } footer { padding-bottom: calc(96px + env(safe-area-inset-bottom, 0px)); } }
 </style>
 </head>
 <body>
@@ -396,7 +373,7 @@
   </svg>
   <div class="wrap">
     <div class="hero-copy">
-      <h1><span class="eyebrow kicker">CRM для самозанятых и малого бизнеса · страны СНГ</span> Клиенты, заказы и оплаты под контролем <span class="grad">в&nbsp;Telegram</span></h1>
+      <h1><span class="eyebrow kicker">CRM для самозанятых и малого бизнеса · Беларусь и Россия</span> Клиенты, заказы и оплаты под контролем <span class="grad">в&nbsp;Telegram</span></h1>
       <p class="lead">Ведите клиентскую базу, принимайте заявки, планируйте записи, контролируйте оплаты и получайте напоминания. SoloGram помогает организовать работу без таблиц и отдельной CRM.</p>
       <div class="cta-row">
         <a class="btn" id="hero-cta" href="https://t.me/sologram_crm_bot?start=site" data-goal="open_bot" rel="noopener">
@@ -412,26 +389,10 @@
       </ul>
     </div>
 
-    <div class="stage" aria-hidden="true">
-      <div class="phone">
-        <div class="screen">
-          <div class="chat-head"><img src="/img/logo-128.webp" width="34" height="34" alt=""><div><b>Студия «Лето»</b><small>ответы через бота SoloGram</small></div></div>
-          <div class="msgs">
-            <div class="msg in">Здравствуйте! Можно на пятницу после обеда?<time>13:02</time></div>
-            <div class="msg out">Да, есть 15:00 и 16:30. Записать?<time>13:05</time></div>
-            <div class="msg in">Давайте на 15:00<time>13:06</time></div>
-            <div class="card-msg"><p>Вы записаны: <b>пт, 30 октября, 15:00</b>. Накануне напомним.</p><div class="kb"><span>Перенести</span><span>Отменить</span></div></div>
-          </div>
-          <div class="compose"><span>Сообщение</span></div>
-        </div>
-      </div>
-      <div class="float">
-        <div class="k">Заработано сегодня</div>
-        <div class="v" id="earned" data-alt="+ 240 BYN|+ 45 000 ₸">+ 7 500 ₽</div>
-        <div class="row"><span><i class="dot"></i>Визиты оплачены</span><span>5/6</span></div>
-        <div class="row"><span><i class="dot w"></i>Чеки к выставлению</span><span>1</span></div>
-      </div>
-    </div>
+    <figure class="stage">
+      <div class="hero-screen"><img src="/img/app/home.webp" width="585" height="1200" fetchpriority="high" alt="Главная CRM: задачи на сегодня и чаты с клиентами"></div>
+      <figcaption>Экран приложения с тестовыми данными</figcaption>
+    </figure>
   </div>
 </section>
 
@@ -442,7 +403,7 @@
       <h2>Так выглядит CRM в Telegram</h2>
       <p class="lead">Настоящие экраны приложения, заполненные тестовыми данными. Открываются кнопкой «Открыть CRM» в боте на телефоне и компьютере.</p>
     </div>
-    <div class="shots">
+    <div class="shots" tabindex="0" role="region" aria-label="Экраны приложения; прокрутите для просмотра">
       <figure><div class="shot"><img src="/img/app/home.webp" width="585" height="1200" alt="Главная: что требует внимания сегодня и список чатов" loading="lazy"></div><figcaption><b>Главная</b>Что требует внимания сегодня и все чаты с клиентами</figcaption></figure>
       <figure><div class="shot"><img src="/img/app/calendar.webp" width="585" height="1200" alt="Календарь записей на день со свободными окнами" loading="lazy"></div><figcaption><b>Записи</b>Календарь дня, свободные окна и загрузка</figcaption></figure>
       <figure><div class="shot"><img src="/img/app/customer.webp" width="585" height="1200" alt="Карточка клиента с визитами, заказами и оплатами" loading="lazy"></div><figcaption><b>Клиент</b>Контакты, визиты, заказы и оплаты в одной карточке</figcaption></figure>
@@ -486,14 +447,14 @@
     <div class="head">
       <span class="eyebrow">Один день</span>
       <h2>Бот помнит за вас</h2>
-      <p class="lead">Вы работаете с клиентами, а SoloGram следит, чтобы ничего не потерялось: ни сообщение, ни визит, ни чек.</p>
+      <p class="lead">Вы работаете с клиентами, а SoloGram помогает следить за сообщениями, визитами и чеками.</p>
     </div>
     <ol class="day">
       <li><time>09:00</time><i class="pin"></i><div><b>Клиент пишет боту по вашей ссылке</b><span>Сообщение приходит в CRM, вам — уведомление. Заявка создаётся сама.</span></div></li>
       <li><time>11:00</time><i class="pin"></i><div><b>Забыли ответить</b><span>Прочитали и не ответили — через 2 часа бот напомнит. Ночью не беспокоит.</span></div></li>
-      <li><time>12:00</time><i class="pin"></i><div><b>Напоминание о чеках</b><span>После каждой оплаты CRM напоминает выставить чек и присылает список одним сообщением в 12:00, 16:00 и 20:00. Чек вы выставляете сами в налоговом сервисе, затем отмечаете его в CRM.</span></div></li>
-      <li><time>15:00</time><i class="pin"></i><div><b>Визит</b><span>Клиент получил «Вы записаны» и напоминание накануне. После визита вы отмечаете «Пришли» и оплату.</span></div></li>
-      <li><time>20:00</time><i class="pin"></i><div><b>Итоги дня</b><span>Бот присылает визиты дня без отметки с кнопкой «Все пришли» и напоминает клиентам о завтрашних записях.</span></div></li>
+      <li><time>12:00</time><i class="pin"></i><div><b>Напоминание о чеках</b><span>Если для оплаты нужен чек, CRM напоминает о нём списком в 12:00, 16:00 и 20:00 с учётом тихих часов. Чек вы выставляете сами в налоговом сервисе, затем отмечаете его в CRM.</span></div></li>
+      <li><time>15:00</time><i class="pin"></i><div><b>Визит</b><span>После подтверждения клиент получает сообщение о записи; напоминание отправляется по вашим настройкам. После визита вы отмечаете «Пришли» и оплату.</span></div></li>
+      <li><time>20:00</time><i class="pin"></i><div><b>Итоги дня</b><span>По умолчанию бот присылает визиты дня без отметки с кнопкой «Все пришли».</span></div></li>
     </ol>
   </div>
 </section>
@@ -524,13 +485,13 @@
       </article>
       <article>
         <h3>Заказы и оплаты</h3>
-        <p>Наличные, карта или перевод: вы отмечаете оплату, CRM считает остаток и долги. Суммы в валюте вашей страны: рубли, тенге, сумы, сомы, сомони, драмы, манаты, леи, лари. Возвраты, счёт и акт в PDF.</p>
+        <p>Наличные, карта или перевод: вы отмечаете оплату, CRM считает остаток и долги. Суммы — в валюте вашей страны. Возвраты, счёт и акт в PDF.</p>
       </article>
       <article>
         <h3>Напоминания о чеках и налоговых сроках</h3>
         <p>SoloGram помогает учитывать доходы и не забывать о необходимых действиях. Чеки вы выставляете самостоятельно в официальном налоговом сервисе своей страны.</p>
-        <div class="chk"><span>Уплата налога: Россия до 28-го</span><span>Беларусь до 22-го</span><span>Другие страны: свой режим, срок и ставка</span></div>
-        <p>Работаете в другой стране или как ИП? При настройке укажите свой налоговый режим, до какого числа платить и, по желанию, ставку. Бот напомнит заранее и покажет доход за период и примерную сумму налога.</p>
+        <div class="chk"><span>НПД: Россия до 28-го</span><span>НПД: Беларусь до 22-го</span><span>Другой режим: свой срок и ставка</span></div>
+        <p>Работаете как ИП или применяете другой налоговый режим? При настройке укажите свой налоговый режим, до какого числа платить и, по желанию, ставку. Бот напомнит заранее и покажет доход за период и примерную сумму налога.</p>
       </article>
       <article class="wide">
         <h3>«Сводка» показывает, на чём вы зарабатываете</h3>
@@ -610,13 +571,13 @@
       </div></details>
       <details><summary>Что будет после 7 бесплатных дней?</summary><div class="ans">
         <p>Ничего не спишется: подписки нет, пока вы сами её не оформите. После пробного периода есть ещё 2 дня, когда всё работает как прежде. Если подписку не оформить, CRM переходит в режим просмотра.</p>
-        <p><b>Сохраняется и работает:</b> все данные (клиенты, история, записи, заказы, оплаты), чтение чатов, «Сводка», отметка чеков, счета и акты PDF, поддержка. Новые сообщения клиентов продолжают приходить в CRM, ни одно не потеряется.</p>
+        <p><b>Сохраняется и работает:</b> все данные (клиенты, история, записи, заказы, оплаты), чтение чатов, «Сводка», отметка чеков, счета и акты PDF, поддержка. Новые сообщения клиентов продолжают поступать в CRM.</p>
         <p><b>Становится недоступно:</b> ответы клиентам, новые записи, заказы и заявки, отметка оплат, изменение данных и настроек. Онлайн-запись в боте закрывается, напоминания клиентам и автоответ не отправляются.</p>
         <p>Оформили подписку — всё снова работает сразу, с теми же данными.</p>
       </div></details>
       <details><summary>Нужна касса или эквайринг?</summary><p>Нет. Деньги вы принимаете как обычно и отмечаете оплату в CRM.</p></details>
       <details><summary>CRM выставляет чеки в налоговую?</summary><p>Нет. Она напоминает выставить чек и хранит отметки. Сам чек вы выставляете в «Мой налог» (Россия), в сервисе МНС (Беларусь) или в налоговом сервисе своей страны.</p></details>
-      <details><summary>Кто видит мои данные?</summary><p>Только вы. Вход через ваш аккаунт Telegram, общего доступа нет. Данные банковских карт и пароли от государственных сервисов не хранятся.</p></details>
+      <details><summary>Кто видит мои данные?</summary><p>Вход — через ваш аккаунт Telegram; сотрудников и общего доступа в CRM нет. Данные банковских карт и пароли от государственных сервисов не хранятся. Об обработке данных — в <a href="/privacy.html">политике конфиденциальности</a>.</p></details>
       <details><summary>Клиенты увидят рекламу?</summary><p>Нет. Бот не делает рассылок и не пишет клиентам от себя: только ваши ответы и сообщения, которые вы включили, например напоминания о записи. Клиент видит чат с вами, свои записи и заказы. О SoloGram ему говорит только описание бота и справка /help, которую он открывает сам: там одна строка для тех, кто захочет такую же CRM.</p></details>
     </div>
     <p class="faq-more">Подробно обо всех функциях рассказано в <a href="/guide.html">руководстве пользователя</a>.</p>
@@ -650,21 +611,6 @@
       var a = e.target.closest && e.target.closest("[data-goal]");
       if (a && YM_ID && typeof window.ym === "function") window.ym(YM_ID, "reachGoal", a.getAttribute("data-goal"));
     });
-    // The phone's earnings card shows the currencies in turn: RUB at rest, then BYN and KZT.
-    var earned = document.getElementById("earned");
-    if (earned && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-      setInterval(function () {
-        earned.style.opacity = 0;
-        setTimeout(function () {
-          var rest = earned.getAttribute("data-alt").split("|");
-          var next = rest.shift();
-          rest.push(earned.textContent);
-          earned.setAttribute("data-alt", rest.join("|"));
-          earned.textContent = next;
-          earned.style.opacity = 1;
-        }, 300);
-      }, 3500);
-    }
     var hero = document.getElementById("hero-cta"), bar = document.getElementById("sticky-cta");
     if (hero && bar && "IntersectionObserver" in window) {
       new IntersectionObserver(function (entries) {
