@@ -340,6 +340,7 @@
   .activity-demo h3 { margin-bottom: 12px; }
   .activity-demo p { color: var(--mist); margin: 0 0 18px; max-width: 32em; }
   .activity-picker { display: grid; gap: 8px; max-width: 380px; }
+  .activity-picker[hidden] { display: none; }
   .activity-picker label { font-weight: 600; }
   .activity-picker select { width: 100%; min-height: 48px; padding: 10px 14px; color: var(--sky); background: var(--panel); border: 1px solid var(--panel-line); border-radius: 12px; font: inherit; }
   .activity-shots { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
@@ -433,7 +434,7 @@
       <figure><a class="shot" href="/img/app/summary.webp" aria-label="Открыть полный экран сводки"><img src="/img/app/summary.webp" width="585" height="1200" alt="Сводка: оплаты, средний чек и доход по услугам" loading="lazy"></a><figcaption><b>Сводка</b>Оплаты, средний чек, доход по услугам и расходы</figcaption></figure>
     </div>
     <div class="activity-demo">
-      <div><h3>Примеры для вашего дела</h3><p>Выберите направление и посмотрите, как могут выглядеть услуги и товары в CRM. Все названия и цены вымышлены.</p><div class="activity-picker"><label for="activity-choice">Вид деятельности</label><select id="activity-choice"><option value="services">Услуги</option><option value="beauty">Красота и уход</option><option value="repair">Ремонт</option><option value="consulting">Консультации</option><option value="education">Обучение</option><option value="online_services">Онлайн-услуги</option><option value="sales">Продажа товаров</option><option value="photo_video">Фото и видео</option><option value="it_digital">IT и digital</option><option value="rental">Аренда</option><option value="handmade">Изделия ручной работы</option><option value="home_services">Бытовые услуги</option><option value="other">Другое</option></select></div></div>
+      <div><h3>Примеры для вашего дела</h3><p>Выберите направление и посмотрите, как могут выглядеть услуги и товары в CRM. Все названия и цены вымышлены.</p><div class="activity-picker" hidden><label for="activity-choice">Вид деятельности</label><select id="activity-choice"><option value="services">Услуги</option><option value="beauty">Красота и уход</option><option value="repair">Ремонт</option><option value="consulting">Консультации</option><option value="education">Обучение</option><option value="online_services">Онлайн-услуги</option><option value="sales">Продажа товаров</option><option value="photo_video">Фото и видео</option><option value="it_digital">IT и digital</option><option value="rental">Аренда</option><option value="handmade">Изделия ручной работы</option><option value="home_services">Бытовые услуги</option><option value="other">Другое</option></select></div></div>
       <div class="activity-shots"><figure data-activity="services"><a class="shot" href="/img/demo/services.jpg" aria-label="Увеличить пример: Услуги"><img src="/img/demo/services.jpg" width="390" height="844" alt="Пример каталога CRM: Услуги" loading="lazy"></a><figcaption><b>Услуги</b>Вымышленные услуги и товары в CRM</figcaption></figure>
       <figure data-activity="beauty"><a class="shot" href="/img/demo/beauty.jpg" aria-label="Увеличить пример: Красота и уход"><img src="/img/demo/beauty.jpg" width="390" height="844" alt="Пример каталога CRM: Красота и уход" loading="lazy"></a><figcaption><b>Красота и уход</b>Вымышленные услуги и товары в CRM</figcaption></figure>
       <figure data-activity="repair"><a class="shot" href="/img/demo/repair.jpg" aria-label="Увеличить пример: Ремонт"><img src="/img/demo/repair.jpg" width="390" height="844" alt="Пример каталога CRM: Ремонт" loading="lazy"></a><figcaption><b>Ремонт</b>Вымышленные услуги и товары в CRM</figcaption></figure>
@@ -676,6 +677,7 @@
     if (activityChoice) {
       var activityFigures = document.querySelectorAll(".activity-shots figure");
       function showActivity() { activityFigures.forEach(function (figure) { figure.hidden = figure.dataset.activity !== activityChoice.value; }); }
+      activityChoice.closest(".activity-picker").hidden = false;
       activityChoice.addEventListener("change", showActivity);
       showActivity();
     }
