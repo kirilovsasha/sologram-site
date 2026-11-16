@@ -335,6 +335,19 @@
   .screen-viewer h2 { font: 600 18px/1.3 var(--body); }
   .screen-viewer button { min-height: 44px; padding: 0 16px; border: 1px solid var(--panel-line); border-radius: 12px; background: var(--panel); color: var(--sky); font: 600 16px/1 var(--body); cursor: pointer; }
   .screen-viewer img { width: min(100%, 585px); height: auto; margin: auto; border-radius: 12px; }
+  .activity-demo { margin-top: clamp(42px, 6vw, 72px); display: grid; grid-template-columns: minmax(0, 1fr); gap: 28px; align-items: start; }
+  @media (min-width: 760px) { .activity-demo { grid-template-columns: minmax(0, 1fr) minmax(230px, 330px); gap: 56px; } }
+  .activity-demo h3 { margin-bottom: 12px; }
+  .activity-demo p { color: var(--mist); margin: 0 0 18px; max-width: 32em; }
+  .activity-picker { display: grid; gap: 8px; max-width: 380px; }
+  .activity-picker label { font-weight: 600; }
+  .activity-picker select { width: 100%; min-height: 48px; padding: 10px 14px; color: var(--sky); background: var(--panel); border: 1px solid var(--panel-line); border-radius: 12px; font: inherit; }
+  .activity-shots { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
+  .activity-shots figure { margin: 0; display: grid; gap: 12px; align-content: start; }
+  .activity-shots figure[hidden] { display: none; }
+  .activity-shots .shot img { aspect-ratio: 390 / 510; object-fit: cover; object-position: top; }
+  .activity-shots figcaption { color: var(--mist); font-size: 15px; }
+  .activity-shots figcaption b { display: block; color: var(--sky); }
   .shots figcaption { color: var(--mist); font-size: 15px; }
   .shots figcaption b { display: block; color: var(--sky); font-weight: 600; }
   @media (max-width: 700px) { .shots { grid-auto-columns: 72%; } }
@@ -401,7 +414,7 @@
     </div>
 
     <figure class="stage">
-      <div class="hero-screen"><img src="/img/app/home.webp" width="585" height="1200" fetchpriority="high" alt="Главная CRM: задачи на сегодня и чаты с клиентами"></div>
+      <div class="hero-screen"><img src="/img/demo/hero.jpg" width="390" height="844" fetchpriority="high" alt="Главная CRM: задачи на сегодня и чаты с клиентами"></div>
       <figcaption>Экран приложения с тестовыми данными</figcaption>
     </figure>
   </div>
@@ -418,6 +431,22 @@
       <figure><a class="shot" href="/img/app/calendar.webp" aria-label="Открыть полный экран записей"><img src="/img/app/calendar.webp" width="585" height="1200" alt="Календарь записей на день со свободными окнами" loading="lazy"></a><figcaption><b>Записи</b>Календарь дня, свободные окна и загрузка</figcaption></figure>
       <figure><a class="shot" href="/img/app/customer.webp" aria-label="Открыть полный экран карточки клиента"><img src="/img/app/customer.webp" width="585" height="1200" alt="Карточка клиента с визитами, заказами и оплатами" loading="lazy"></a><figcaption><b>Клиент</b>Контакты, визиты, заказы и оплаты в одной карточке</figcaption></figure>
       <figure><a class="shot" href="/img/app/summary.webp" aria-label="Открыть полный экран сводки"><img src="/img/app/summary.webp" width="585" height="1200" alt="Сводка: оплаты, средний чек и доход по услугам" loading="lazy"></a><figcaption><b>Сводка</b>Оплаты, средний чек, доход по услугам и расходы</figcaption></figure>
+    </div>
+    <div class="activity-demo">
+      <div><h3>Примеры для вашего дела</h3><p>Выберите направление и посмотрите, как могут выглядеть услуги и товары в CRM. Все названия и цены вымышлены.</p><div class="activity-picker"><label for="activity-choice">Вид деятельности</label><select id="activity-choice"><option value="services">Услуги</option><option value="beauty">Красота и уход</option><option value="repair">Ремонт</option><option value="consulting">Консультации</option><option value="education">Обучение</option><option value="online_services">Онлайн-услуги</option><option value="sales">Продажа товаров</option><option value="photo_video">Фото и видео</option><option value="it_digital">IT и digital</option><option value="rental">Аренда</option><option value="handmade">Изделия ручной работы</option><option value="home_services">Бытовые услуги</option><option value="other">Другое</option></select></div></div>
+      <div class="activity-shots"><figure data-activity="services"><a class="shot" href="/img/demo/services.jpg" aria-label="Увеличить пример: Услуги"><img src="/img/demo/services.jpg" width="390" height="844" alt="Пример каталога CRM: Услуги" loading="lazy"></a><figcaption><b>Услуги</b>Вымышленные услуги и товары в CRM</figcaption></figure>
+      <figure data-activity="beauty"><a class="shot" href="/img/demo/beauty.jpg" aria-label="Увеличить пример: Красота и уход"><img src="/img/demo/beauty.jpg" width="390" height="844" alt="Пример каталога CRM: Красота и уход" loading="lazy"></a><figcaption><b>Красота и уход</b>Вымышленные услуги и товары в CRM</figcaption></figure>
+      <figure data-activity="repair"><a class="shot" href="/img/demo/repair.jpg" aria-label="Увеличить пример: Ремонт"><img src="/img/demo/repair.jpg" width="390" height="844" alt="Пример каталога CRM: Ремонт" loading="lazy"></a><figcaption><b>Ремонт</b>Вымышленные услуги и товары в CRM</figcaption></figure>
+      <figure data-activity="consulting"><a class="shot" href="/img/demo/consulting.jpg" aria-label="Увеличить пример: Консультации"><img src="/img/demo/consulting.jpg" width="390" height="844" alt="Пример каталога CRM: Консультации" loading="lazy"></a><figcaption><b>Консультации</b>Вымышленные услуги и товары в CRM</figcaption></figure>
+      <figure data-activity="education"><a class="shot" href="/img/demo/education.jpg" aria-label="Увеличить пример: Обучение"><img src="/img/demo/education.jpg" width="390" height="844" alt="Пример каталога CRM: Обучение" loading="lazy"></a><figcaption><b>Обучение</b>Вымышленные услуги и товары в CRM</figcaption></figure>
+      <figure data-activity="online_services"><a class="shot" href="/img/demo/online_services.jpg" aria-label="Увеличить пример: Онлайн-услуги"><img src="/img/demo/online_services.jpg" width="390" height="844" alt="Пример каталога CRM: Онлайн-услуги" loading="lazy"></a><figcaption><b>Онлайн-услуги</b>Вымышленные услуги и товары в CRM</figcaption></figure>
+      <figure data-activity="sales"><a class="shot" href="/img/demo/sales.jpg" aria-label="Увеличить пример: Продажа товаров"><img src="/img/demo/sales.jpg" width="390" height="844" alt="Пример каталога CRM: Продажа товаров" loading="lazy"></a><figcaption><b>Продажа товаров</b>Вымышленные услуги и товары в CRM</figcaption></figure>
+      <figure data-activity="photo_video"><a class="shot" href="/img/demo/photo_video.jpg" aria-label="Увеличить пример: Фото и видео"><img src="/img/demo/photo_video.jpg" width="390" height="844" alt="Пример каталога CRM: Фото и видео" loading="lazy"></a><figcaption><b>Фото и видео</b>Вымышленные услуги и товары в CRM</figcaption></figure>
+      <figure data-activity="it_digital"><a class="shot" href="/img/demo/it_digital.jpg" aria-label="Увеличить пример: IT и digital"><img src="/img/demo/it_digital.jpg" width="390" height="844" alt="Пример каталога CRM: IT и digital" loading="lazy"></a><figcaption><b>IT и digital</b>Вымышленные услуги и товары в CRM</figcaption></figure>
+      <figure data-activity="rental"><a class="shot" href="/img/demo/rental.jpg" aria-label="Увеличить пример: Аренда"><img src="/img/demo/rental.jpg" width="390" height="844" alt="Пример каталога CRM: Аренда" loading="lazy"></a><figcaption><b>Аренда</b>Вымышленные услуги и товары в CRM</figcaption></figure>
+      <figure data-activity="handmade"><a class="shot" href="/img/demo/handmade.jpg" aria-label="Увеличить пример: Изделия ручной работы"><img src="/img/demo/handmade.jpg" width="390" height="844" alt="Пример каталога CRM: Изделия ручной работы" loading="lazy"></a><figcaption><b>Изделия ручной работы</b>Вымышленные услуги и товары в CRM</figcaption></figure>
+      <figure data-activity="home_services"><a class="shot" href="/img/demo/home_services.jpg" aria-label="Увеличить пример: Бытовые услуги"><img src="/img/demo/home_services.jpg" width="390" height="844" alt="Пример каталога CRM: Бытовые услуги" loading="lazy"></a><figcaption><b>Бытовые услуги</b>Вымышленные услуги и товары в CRM</figcaption></figure>
+      <figure data-activity="other"><a class="shot" href="/img/demo/other.jpg" aria-label="Увеличить пример: Другое"><img src="/img/demo/other.jpg" width="390" height="844" alt="Пример каталога CRM: Другое" loading="lazy"></a><figcaption><b>Другое</b>Вымышленные услуги и товары в CRM</figcaption></figure></div>
     </div>
   </div>
 </section>
@@ -629,7 +658,7 @@
     var viewerTitle = document.getElementById("screen-viewer-title");
     var viewerClose = document.getElementById("screen-viewer-close");
     if (viewer && typeof viewer.showModal === "function") {
-      document.querySelector(".shots").addEventListener("click", function (event) {
+      document.querySelectorAll(".shots, .activity-shots").forEach(function (gallery) { gallery.addEventListener("click", function (event) {
         var link = event.target.closest("a.shot");
         if (!link || event.defaultPrevented || event.button !== 0 || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
         var image = link.querySelector("img");
@@ -640,8 +669,15 @@
         viewerTitle.textContent = link.closest("figure").querySelector("figcaption b").textContent;
         viewer.showModal();
         viewerClose.focus();
-      });
+      }); });
       viewerClose.addEventListener("click", function () { viewer.close(); });
+    }
+    var activityChoice = document.getElementById("activity-choice");
+    if (activityChoice) {
+      var activityFigures = document.querySelectorAll(".activity-shots figure");
+      function showActivity() { activityFigures.forEach(function (figure) { figure.hidden = figure.dataset.activity !== activityChoice.value; }); }
+      activityChoice.addEventListener("change", showActivity);
+      showActivity();
     }
     var hero = document.getElementById("hero-cta"), bar = document.getElementById("sticky-cta");
     if (hero && bar && "IntersectionObserver" in window) {
