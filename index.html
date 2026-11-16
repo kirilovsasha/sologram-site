@@ -250,6 +250,10 @@
   section { padding-block: clamp(56px, 7vw, 80px); scroll-margin-top: 82px; }
   .band { background: linear-gradient(180deg, var(--ink-2), var(--ink)); border-top: 1px solid var(--panel-line); }
 
+  /* Keep the gallery and its following section visually connected. */
+  #screens { padding-bottom: clamp(40px, 5vw, 64px); }
+  #who { padding-top: clamp(40px, 5vw, 64px); }
+
   /* Who it is for */
   .who { display: grid; gap: 16px; }
   @media (min-width: 820px) { .who { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
@@ -277,6 +281,7 @@
   @media (min-width: 1040px) { .bento { grid-template-columns: repeat(3, minmax(0, 1fr)); } .bento .wide { grid-column: span 2; } }
   .bento article { display: grid; gap: 10px; align-content: start; padding: 26px; border-radius: var(--r); background: var(--panel); box-shadow: inset 0 0 0 1px var(--panel-line); min-width: 0; }
   .bento article p { margin: 0; color: var(--mist); }
+  .bento article:not(.wide) { background: rgba(11, 34, 99, .72); }
   .bento .wide { background: radial-gradient(90% 120% at 100% 0%, rgba(47, 123, 255, .35), transparent 60%), var(--panel); }
   .mini { display: grid; gap: 8px; margin-top: 10px; }
   .mini div { display: flex; justify-content: space-between; gap: 12px; padding: 10px 14px; border-radius: 12px; background: rgba(3, 13, 51, .55); font-size: 15px; }
@@ -374,7 +379,7 @@
   <div class="wrap">
     <div class="hero-copy">
       <h1><span class="eyebrow kicker">CRM для самозанятых и малого бизнеса · Беларусь и Россия</span> Клиенты, заказы и оплаты под контролем <span class="grad">в&nbsp;Telegram</span></h1>
-      <p class="lead">Ведите клиентскую базу, принимайте заявки, планируйте записи, контролируйте оплаты и получайте напоминания. SoloGram помогает организовать работу без таблиц и отдельной CRM.</p>
+      <p class="lead">Клиенты, записи и заказы — в одном приложении внутри Telegram. Отвечайте на сообщения и следите за оплатами без таблиц.</p>
       <div class="cta-row">
         <a class="btn" id="hero-cta" href="https://t.me/sologram_crm_bot?start=site" data-goal="open_bot" rel="noopener">
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M2.5 11.3l17.7-6.9c.8-.3 1.6.2 1.3 1.5l-3 14.2c-.2 1-.8 1.3-1.7.8l-4.6-3.4-2.2 2.1c-.3.3-.5.5-1 .5l.3-4.8 8.6-7.8c.4-.3-.1-.5-.6-.2L6.6 14 2 12.6c-1-.3-1-1 .5-1.3z"/></svg>
@@ -449,8 +454,8 @@
       <p class="lead">Вы работаете с клиентами, а SoloGram помогает следить за сообщениями, визитами и чеками.</p>
     </div>
     <ol class="day">
-      <li><time>09:00</time><i class="pin"></i><div><b>Клиент пишет боту по вашей ссылке</b><span>Сообщение приходит в CRM, вам — уведомление. Заявка создаётся сама.</span></div></li>
-      <li><time>11:00</time><i class="pin"></i><div><b>Забыли ответить</b><span>Прочитали и не ответили — через 2 часа бот напомнит. Ночью не беспокоит.</span></div></li>
+      <li><time>09:00</time><i class="pin"></i><div><b>Клиент пишет боту по вашей ссылке</b><span>Сообщение приходит в CRM, вам — уведомление. Первое сообщение нового клиента создаёт заявку; для постоянного клиента открывается чат.</span></div></li>
+      <li><time>11:00</time><i class="pin"></i><div><b>Забыли ответить</b><span>Прочитали и не ответили — через 2 часа бот напомнит, с учётом ночного времени и тихих часов.</span></div></li>
       <li><time>15:00</time><i class="pin"></i><div><b>Визит</b><span>После подтверждения клиент получает сообщение о записи; напоминание отправляется по вашим настройкам. После визита вы отмечаете «Пришли» и оплату.</span></div></li>
     </ol>
   </div>
@@ -474,7 +479,7 @@
       </article>
       <article>
         <h3>Все чаты в одном месте</h3>
-        <p>Ответ уходит клиенту в Telegram. Быстрые ответы, фото, голосовые. С Telegram Business переписка из личных сообщений тоже попадает в CRM.</p>
+        <p>Отвечайте текстом и фотографиями, используйте быстрые ответы. Голосовые, видео и документы клиентов открываются в CRM. С Telegram Business сюда попадает и переписка из личных сообщений.</p>
       </article>
       <article>
         <h3>Онлайн-запись в боте</h3>
@@ -488,7 +493,7 @@
         <h3>Напоминания о чеках и налоговых сроках</h3>
         <p>SoloGram помогает учитывать доходы и не забывать о необходимых действиях. Чеки вы выставляете самостоятельно в официальном налоговом сервисе своей страны.</p>
         <div class="chk"><span>НПД: Россия до 28-го</span><span>НПД: Беларусь до 22-го</span><span>Другой режим: свой срок и ставка</span></div>
-        <p>Работаете как ИП или применяете другой налоговый режим? При настройке укажите свой налоговый режим, до какого числа платить и, по желанию, ставку. Бот напомнит заранее и покажет доход за период и примерную сумму налога.</p>
+        <p>Для своего режима укажите срок уплаты и, по желанию, ставку. Бот напомнит и покажет доход и примерную сумму налога.</p>
       </article>
       <article class="wide">
         <h3>«Сводка» показывает, на чём вы зарабатываете</h3>
@@ -507,7 +512,7 @@
     <div class="head">
       <span class="eyebrow">Как начать</span>
       <h2>Три шага до первой заявки</h2>
-      <p class="lead">Вход через аккаунт Telegram, без паролей и установок.</p>
+      <p class="lead">Вход через аккаунт Telegram, без паролей и установок. После обязательной настройки начнутся 7 бесплатных дней; автоматически ничего не спишется.</p>
     </div>
     <ol class="steps">
       <li><h3>Откройте бота</h3><span>Нажмите «Старт», затем «Открыть CRM».</span></li>
@@ -529,7 +534,7 @@
       <div class="price">
         <div class="t">Пробный период</div>
         <div class="v">7 дней <small>бесплатно</small></div>
-        <p>Все функции сразу после настройки. Не нужно ничего оплачивать, привязывать карту или оформлять подписку.</p>
+        <p>Начинается после обязательной настройки и предоставляется один раз на аккаунт Telegram. Оплачивать или оформлять подписку не нужно.</p>
       </div>
       <div class="price main">
         <div class="t">Каждый месяц</div>
